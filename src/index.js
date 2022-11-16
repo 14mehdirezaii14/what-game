@@ -61,4 +61,4 @@ class Root extends Component {
 
 export default Root;
 
-ReactDOM.render(<Root />, document.getElementById('viaje'));
+ReactDOM.render('hello', document.getElementById('viaje'));
