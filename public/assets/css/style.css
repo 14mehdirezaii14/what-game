@@ -4583,11 +4583,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .author-area .media-body {
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .author-area .media-body h4 {
-  font-family: var(--body-font);
   margin-bottom: 30px;
 }
 
@@ -5336,7 +5335,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-bottom: 0;
   font-weight: 500;
   font-size: 14px;
-  font-family: var(--heading-font);
 }
 
 /* -----------------------------------------------------
@@ -6597,7 +6595,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .single-client-card .media .media-body h4 {
   font-size: 18px;
   font-weight: 500;
-  font-family: var(--paragraph-font);
   margin-bottom: 5px;
 }
 
@@ -7456,14 +7453,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   font-weight: 500;
   position: relative;
   margin-bottom: 30px;
-  font-family: var(--body-font);
-  padding-left: 37px;
+  padding-right: 37px;
 }
 
-.widget-title:after {
+.widget-title::before {
   content: '';
   position: absolute;
-  left: 0;
+  right: 0;
   top: 50%;
   margin-top: -1.5px;
   width: 27px;
@@ -7605,7 +7601,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .widget-recent-post ul li .media .media-body {
-  margin-left: 18px;
+  margin-right: 18px;
 }
 
 .widget-recent-post ul li .media .media-body .title {
@@ -7615,7 +7611,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   letter-spacing: 0;
   color: var(--main-color-two);
   margin-bottom: 0;
-  font-family: var(--body-font);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

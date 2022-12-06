@@ -17,7 +17,7 @@ class Page_header extends Component {
 				        <div className="breadcrumb-inner">
 				          <h1 className="page-title">{ HeaderTitle }</h1>
 				          <ul className="page-list">
-				            <li><Link to="/">Home</Link></li>
+				            {/* <li><Link to="/">Home</Link></li> */}
 				            <li>{ Subheader }</li>
 				          </ul>
 				        </div>

@@ -3,74 +3,77 @@ import { Link } from 'react-router-dom';
 import Comments from './comments';
 import Sidebar from './sidebar';
 class BlogDetails extends Component {
-  render() {
-    let publicUrl = process.env.PUBLIC_URL+'/'
-    let imagealt = 'image'
+	render() {
+		let publicUrl = process.env.PUBLIC_URL + '/'
+		let imagealt = 'image'
 
-    return (
-     	<div className="blog-details-area pd-top-120 viaje-go-top">
-		  <div className="container">
-		    <div className="row">
-		      <div className="col-lg-8">
-		        <div className="single-blog mb-0">
-		          <div className="thumb">
-		            <img src={publicUrl+"assets/img/blog-details/1.png"} alt="blog" />
-		          </div>
-		          <div className="single-blog-details">
-		            <p className="date mb-0">19 September 2019</p>
-		            <h3 className="title">Why You Shouldn’t Ride Elephants France.</h3>
-		            <p className="content mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-		          </div>
-		        </div>
-		        {/* details-blockquote-start */}
-		        <blockquote className="blockquote tp-blockquote bg-dark-blue">
+		return (
+			<div className="blog-details-area pd-top-120 viaje-go-top">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-8">
+							<div className="single-blog mb-0 text-right">
+								<div className="thumb">
+									<img src={publicUrl + "assets/img/blog-details/1.png"} alt="blog" />
+								</div>
+								<div className="single-blog-details">
+									<p className="date mb-0">۳۱ شهریور ۱۴۰۱</p>
+									<h3 className="title mt-3">اتاق فرار چیست؟</h3>
+									<p className="content mb-0">
+										اتاق قرار یک پدیده نسبتا جدید است که در آن بازیکنان با استفاده از سرنخ ها، استراتژی ها و راهنمایی، مجموعه ای از معماها و چالش ها را حل می کنند تا به هدف خود برسند. بازیکنان برای این کار، با محدودیت زمانی مواجه هستند.
+										در این بازی، بازیکنان در قالب یک شخصیت، ایفای نقش می کنند و با سایر بازیکنان تعامل برقرار می کنند. بازیکنان اغلب در دنیایی غوطه ور می شوند که برای اجرای ماموریت خود و فرار از اتاق، باید شخصیت ها را به خوبی مجسم کنند اگر چه اتاق فرار یک پدیده سرگرم کننده است. اما از آن به منظور تمرین و تیم سازی برای شرکتها و گروه های حرفه ای دیگر نیز استفاده می شود. دلیل اصلی آن، تقویت ارتباط و اعتماد و همکاری است.
+									</p>
+								</div>
+							</div>
+							{/* details-blockquote-start */}
+							{/* <blockquote className="blockquote tp-blockquote bg-dark-blue">
 		          <p className="mb-0">Aliquam faucibus, odio nec commodo aliquam, neque felis placerat dui, a porta ante lectus dapibus est. Aliquam a bibendum mi, sed condimentum est. Mauris arcu odio, vestibulum quis dapibus sit amet, finibus id turpis. Aliquam semper fringilla semper. Sed nec velit sit amet dolor pulvinar feugiat. Suspendisse blandit, nulla sed interdum egestas, nibh ex maximus arcu, non posuere sem nulla in augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra</p>
-		        </blockquote>
-		        {/* details-blockquote-end */}
-		        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-		        <h4 className="single-page-small-title mt-5">Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt. Nam sem lacus, ornare non ante sed, ultricies fringilla massa.</h4>
-		        {/* details-gallery-start */}
-		        <div className="gallery-area">
-		          <div className="containerss">
-		            <div className="gallery-filter-area row custom-gutter">
-		              <div className="gallery-sizer col-1" />
-		              {/* gallery-item */}
-		              <div className="tp-gallery-item col-md-4 col-sm-6 mb-10">
+		        </blockquote> */}
+							{/* details-blockquote-end */}
+							{/* <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+		        <h4 className="single-page-small-title mt-5">Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt. Nam sem lacus, ornare non ante sed, ultricies fringilla massa.</h4> */}
+							{/* details-gallery-start */}
+							<div className="gallery-area">
+								<div className="containerss">
+									<div className="gallery-filter-area row custom-gutter">
+										<div className="gallery-sizer col-1" />
+										{/* gallery-item */}
+										{/* <div className="tp-gallery-item col-md-4 col-sm-6 mb-10">
 		                <div className="tp-gallery-item-img">
 		                  <img src={publicUrl+"assets/img/blog-details/2.png"} alt="image" />
 		                </div>
-		              </div>
-		              {/* gallery-item */}
-		              <div className="tp-gallery-item col-md-4 col-sm-6">
+		              </div> */}
+										{/* gallery-item */}
+										{/* <div className="tp-gallery-item col-md-4 col-sm-6">
 		                <div className="tp-gallery-item-img">
 		                  <img src={publicUrl+"assets/img/blog-details/3.png"} alt="image" />
 		                </div>
-		              </div>
-		              {/* gallery-item */}
-		              <div className="tp-gallery-item col-md-4 col-sm-6">
+		              </div> */}
+										{/* gallery-item */}
+										{/* <div className="tp-gallery-item col-md-4 col-sm-6">
 		                <div className="tp-gallery-item-img">
 		                  <img src={publicUrl+"assets/img/blog-details/4.png"} alt="image" />
 		                </div>
-		              </div>
-		              {/* gallery-item */}
-		              <div className="tp-gallery-item col-md-4 col-sm-6">
+		              </div> */}
+										{/* gallery-item */}
+										{/* <div className="tp-gallery-item col-md-4 col-sm-6">
 		                <div className="tp-gallery-item-img">
 		                  <img src={publicUrl+"assets/img/blog-details/5.png"} alt="image" />
 		                </div>
-		              </div>
-		              {/* gallery-item */}
-		              <div className="tp-gallery-item col-md-4 col-sm-6">
+		              </div> */}
+										{/* gallery-item */}
+										{/* <div className="tp-gallery-item col-md-4 col-sm-6">
 		                <div className="tp-gallery-item-img">
 		                  <img src={publicUrl+"assets/img/blog-details/6.png"} alt="image" />
 		                </div>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-		        {/* details-gallery-end */}
-		        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-		        {/* details-video-start */}
-		        <h4 className="single-page-small-title mt-5">Praesent eu dolor eu orci vehicula euismod.</h4>
+		              </div> */}
+									</div>
+								</div>
+							</div>
+							{/* details-gallery-end */}
+							{/* <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p> */}
+							{/* details-video-start */}
+							{/* <h4 className="single-page-small-title mt-5">Praesent eu dolor eu orci vehicula euismod.</h4>
 		        <div className="video-popup-wrap style-two">
 		          <div className="thumb">
 		            <img src={publicUrl+"assets/img/blog-details/7.png"} alt="video" />
@@ -78,9 +81,9 @@ class BlogDetails extends Component {
 		          <div className="video-popup-btn">
 		            <a href="https://www.youtube.com/watch?v=c7XEhXZ_rsk" className="video-play-btn mfp-iframe"><i className="fa fa-play" /></a>
 		          </div>
-		        </div>
-		        {/* details-video-end */}
-		        <p>Lorem ipsum dolor sit amet, consetetur elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		        </div> */}
+							{/* details-video-end */}
+							{/* <p>Lorem ipsum dolor sit amet, consetetur elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 		        <p>Lorem ipsum dolor sit amet, consetetur elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 		        <div className="row tag-share-area">
 		          <div className="col-lg-6">
@@ -135,9 +138,9 @@ class BlogDetails extends Component {
 		              </div>
 		            </div>
 		          </div>
-		        </nav>
-		        {/* author-area-start */}
-		        <div className="author-area media">
+		        </nav> */}
+							{/* author-area-start */}
+							{/* <div className="author-area media">
 		          <div className="media-left">
 		            <img src={publicUrl+"assets/img/blog-details/8.png"} alt="img" />
 		          </div>
@@ -159,10 +162,10 @@ class BlogDetails extends Component {
 		              </li>
 		            </ul>
 		          </div>
-		        </div>
-		        {/* author-area-end */}
-		        {/* comments-area-start */}
-		        <div className="comments-area">
+		        </div> */}
+							{/* author-area-end */}
+							{/* comments-area-start */}
+							{/* <div className="comments-area">
 		          <h4 className="comments-title">Comments</h4>
 		          <ul className="comment-list">
 		            <li>
@@ -209,10 +212,10 @@ class BlogDetails extends Component {
 		              </div>
 		            </li>
 		          </ul>
-		        </div>
-		        {/* comments-area-end */}
-		        {/* blog-comment-area start */}
-		        <div className="blog-comment-area">
+		        </div> */}
+							{/* comments-area-end */}
+							{/* blog-comment-area start */}
+							{/* <div className="blog-comment-area">
 		          <form className="tp-form-wrap bg-gray tp-form-wrap-one">
 		            <h4 className="single-page-small-title">Write A Coment.</h4>
 		            <div className="row">
@@ -239,15 +242,15 @@ class BlogDetails extends Component {
 		              </div>
 		            </div>
 		          </form>
-		        </div>
-		        {/* blog-comment-area start */}
-		      </div>
-		      <Sidebar />
-		    </div>
-		  </div>
-		</div>
-    )
-  }
+		        </div> */}
+							{/* blog-comment-area start */}
+						</div>
+						<Sidebar />
+					</div>
+				</div>
+			</div>
+		)
+	}
 }
 
 export default BlogDetails;
