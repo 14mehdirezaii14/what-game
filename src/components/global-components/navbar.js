@@ -23,7 +23,7 @@ class Navbar extends Component {
 			          <span className="line" />
 			        </span>
 			      </button>
-			      <div className="nav-right-content">
+			      {/* <div className="nav-right-content">
 			        <ul className="pl-0">
 			          <li className="top-bar-btn-booking">
 			            <Link className="btn btn-yellow" to="/tour-details">Book Now <i className="fa fa-paper-plane" /></Link>
@@ -47,7 +47,7 @@ class Navbar extends Component {
 			            </a>
 			          </li>
 			        </ul>
-			      </div>
+			      </div> */}
 			    </div>
 			    <div className="collapse navbar-collapse" id="tp_main_menu">
 			      <div className="logo-wrapper desktop-logo">
@@ -59,18 +59,18 @@ class Navbar extends Component {
 			        </Link>
 			      </div>
 			      <ul className="navbar-nav">
-			        <li className="menu-item-has-children">
-			          <Link to="/">Home</Link>
+			        <li className="menu-item-has-children text-right">
+			          <Link to="/">اتاق فرار</Link>
 			          <ul className="sub-menu">
 			            <li><Link to="/">Home 01</Link></li>
 			            <li><Link to="/home-v2">Home 02</Link></li>
 			            <li><Link to="/home-v3">Home 03</Link></li>
 			          </ul>
 			        </li>
-			        <li>
+			        {/* <li>
 			          <Link to="/about">About Us</Link>
-			        </li>
-			        <li className="menu-item-has-children">
+			        </li> */}
+			        {/* <li className="menu-item-has-children">
 			          <a href="#">Pages</a>
 			          <ul className="sub-menu">
 			            <li><Link to="/tour-list">Tours List</Link></li>
@@ -87,9 +87,9 @@ class Navbar extends Component {
 			            <li><Link to="/faq">FAQ</Link></li>
 			            <li><Link to="/user-profile">User Profile</Link></li>
 			          </ul>
-			        </li>
-			        <li className="menu-item-has-children">
-			          <Link to="/blog">Blog</Link>
+			        </li> */}
+			        <li className="menu-item-has-children text-right">
+			          <Link to="/blog">وبلاگ</Link>
 			          <ul className="sub-menu">
 			            <li><Link to="/blog">Blog</Link></li>
 			            <li><Link to="/blog-v2">Blog 02</Link></li>
@@ -97,12 +97,12 @@ class Navbar extends Component {
 			            <li><Link to="/blog-details">Blog Details</Link></li>
 			          </ul>
 			        </li>
-			        <li>
-			          <Link to="/contact">Contact</Link>
+			        <li className='text-right'>
+			          <Link to="/contact">درباره ما</Link>
 			        </li>
 			      </ul>
 			    </div>
-			    <div className="nav-right-content">
+			    {/* <div className="nav-right-content">
 			      <ul>
 			        <li>
 			          <Link className="btn btn-yellow" to="/tour-details">Book Now <i className="fa fa-paper-plane" /></Link>
@@ -121,7 +121,7 @@ class Navbar extends Component {
 			          <i className="ti-search" />
 			        </li>
 			      </ul>
-			    </div>
+			    </div> */}
 			  </div>
 			</nav>
 
