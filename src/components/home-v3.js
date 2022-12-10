@@ -20,7 +20,16 @@ const Home_V3 = () => {
         <Banner />
         <Search />
         <UpcomingWorld />
-        <Intro />
+        <div className="destinations-list-slider-bg text-right">
+            
+            <div className="container">
+                hello
+            </div>
+            <h3 className='pr-5 text-light' style={{lineHeight:'56px'}}>
+            سورپرایز در <br /> مناسبت ها
+            </h3>
+        </div>
+        {/* <Intro />
         <UpcomingTour />
         <Video />
         <Counter />
@@ -28,7 +37,7 @@ const Home_V3 = () => {
         <Client />
         <BlogSection />
         <Ads />
-        <Instagram />
+        <Instagram /> */}
         <Footer />
     </div>
 }
