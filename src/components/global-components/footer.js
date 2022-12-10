@@ -20,34 +20,81 @@ class Footer_v1 extends Component {
 		return (
 			<footer className="footer-area" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/bg/2.png)' }}>
 				<div className="container">
-					<div className="row">
-						<div className="col-lg-3 col-md-6">
+					<div className="row text-right">
+						<div className="col-lg-4 col-md-6">
 							<div className="footer-widget widget">
 								<div className="about_us_widget">
 									<Link to="/" className="footer-logo d-flex">
 										<p>بازی چی</p>
 										<img src={publicUrl + "assets/img/favicon.png"} width={50} height={50} alt="footer logo" />
-
 									</Link>
 									<p>We believe brand interaction is key in commu- nication. Real innovations and a positive customer experience are the heart of successful communication.</p>
+									<div className="d-flex mb-5">
+										<div className="bg-light rounded">
+										<img src={publicUrl + "assets/img/Electronic-trust-symbol.png"} alt="" />ّ
+										</div>
+										<div className="bg-light rounded mr-5">
+										<img src={publicUrl + "assets/img/National-mark-of-registration.png"} alt="" />ّ
+										</div>
+									</div>
 									<ul className="social-icon">
 										<li>
-											<a className="facebook" href="https://www.facebook.com/codingeek.net/" target="_blank"><i className="fa fa-facebook  " /></a>
+											<a  href="/" target="_blank"><i className="fa fa-instagram  " /></a>
 										</li>
 										<li>
-											<a className="twitter" href="https://twitter.com/codingeeknet" target="_blank"><i className="fa fa-twitter  " /></a>
+											<a  href="/" target="_blank"><i className="fa fa-whatsapp  " /></a>
 										</li>
-										<li>
-											<a className="pinterest" href="https://www.instagram.com/codingeeknet/" target="_blank"><i className="fa fa-instagram" /></a>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div className="col-lg-4 col-md-6">
+							<div className="footer-widget widget ">
+								<div className="widget-contact">
+									<h4 className="widget-title">دسترسی سریع</h4>
+									
+									<ul className='widget_nav_menu  viaje-go-top'>
+										<li className='text-light my-4'>
+											<Link href='/'>
+												اتاق فرار
+											</Link>
+										</li>
+										{/*  */}
+										<li className='text-light my-4'>
+											<Link href='/'>
+												قوانین و مقررات
+											</Link>
+										</li>
+										{/*  */}
+										<li className='text-light my-4'>
+											<Link href='/'>
+												وبلاگ
+											</Link>
+										</li>
+										{/*  */}
+										<li className='text-light my-4'>
+											<Link href='/'>
+												درباره ما
+											</Link>
+										</li>
+										{/*  */}
+										<li className='text-light my-4'>
+											<Link href='/'>
+												ارتباط با ما
+											</Link>
 										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-6">
-							<div className="footer-widget widget ">
-								<div className="widget-contact">
-									<h4 className="widget-title">Contact us</h4>
+						<div className="col-lg-4 col-md-6">
+							<div className="footer-widget widget widget-contact">
+								<h4 className="widget-title">ارتباط با ما</h4>
+								<ul className="widget_nav_menu  viaje-go-top">
+									<li>
+										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10889.969851145112!2d51.400949339742624!3d35.76045313096898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfa!2s!4v1670674802312!5m2!1sfa!2s" width={400} height={250}  ></iframe>
+									</li>
 									<p>
 										<i className="fa fa-map-marker" />
 										<span>Manama Tower, Badda Link Road, Badda Dhaka, Bangladesh</span>
@@ -62,23 +109,10 @@ class Footer_v1 extends Component {
 											+088 012121240
 										</span>
 									</p>
-								</div>
-							</div>
-						</div>
-						<div className="col-lg-3 col-md-6">
-							<div className="footer-widget widget">
-								<h4 className="widget-title">Quick Link</h4>
-								<ul className="widget_nav_menu  viaje-go-top">
-									<li><Link to="/home-v2">Home</Link></li>
-									<li><Link to="/about">About Us</Link></li>
-									<li><Link to="/destination-list">Destination</Link></li>
-									<li><Link to="/tour-details">Tours</Link></li>
-									<li><Link to="/blog">Blog</Link></li>
-									<li><Link to="/contact">Contact</Link></li>
 								</ul>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-6">
+						{/* <div className="col-lg-3 col-md-6">
 							<div className="footer-widget widget">
 								<h4 className="widget-title">Instagram Gallery</h4>
 								<ul className="widget-instagram-feed">
@@ -90,12 +124,12 @@ class Footer_v1 extends Component {
 									<li><a href="#"><img src={publicUrl + "assets/img/instagram/6.png"} alt="img" /></a></li>
 								</ul>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
-				<div className="copyright-inner">
+				<div className="copyright-inner" style={{direction:'ltr'}}>
 					<div className="copyright-text">
-						© Viaje 2019 All rights reserved. Powered with by <a href="https://codingeek.net/" target="_blank"><i className="fa fa-heart" /><span>Codingeek.</span></a>
+					© Baazi Chi 2022 All rights reserved. Powered with <a href="https://codingeek.net/" target="_blank"><i className="fa fa-heart" /><span>by Nilva</span></a>
 					</div>
 				</div>
 			</footer>

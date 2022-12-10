@@ -19,7 +19,7 @@ const Home_V3 = () => {
     return <div>
         <Navbar />
         <Banner />
-        <Search />
+        {/* <Search /> */}
         <UpcomingWorld />
         <Offer />
         {/* <Intro />

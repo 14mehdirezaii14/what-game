@@ -94,6 +94,13 @@ body {
     font-weight: var(--body-font-width);
     line-height: var(--body-line-height);
     font-family: 'IranSans';
+    background-color: #121212;
+}
+
+.fa,
+.fas {
+    font-family: 'FontAwesome' !important;
+    font-weight: 300 !important;
 }
 
 h1 {
@@ -132,7 +139,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--heading-color);
+    color: white;
 }
 
 p {
@@ -2808,6 +2815,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .navbar-area-fixed {
     -webkit-box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.06);
     box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.06);
+    background-color: #121212 !important;
+    color: white !important;
 }
 
 @media all and (min-width: 992px) {
@@ -3000,7 +3009,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     }
     .navbar-area-fixed .nav-container .navbar-collapse .navbar-nav li a {
         line-height: 80px;
-        color: var(--paragraph-color);
+        color: white;
     }
     .navbar-area-fixed .nav-container .nav-right-content ul li {
         display: inline-block;
@@ -3701,6 +3710,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     position: relative;
     text-align: center;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .main-banner-area:before {
@@ -6071,7 +6083,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .upcomming-card-slider-1 .slick-next {
     position: absolute;
-    left: 250px;
+    left: 225px;
     top: -150px;
 }
 
@@ -7353,10 +7365,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .widget-contact p i {
-    margin-right: 12px;
+    margin-left: 12px;
     width: auto;
     height: 100%;
-    float: left;
+    float: right;
     padding-top: 5px;
     color: var(--main-color-one);
 }
@@ -8326,7 +8338,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .copyright-inner .copyright-text a i {
     color: var(--main-color-one);
-    padding: 0 3px 0 5px;
+    /* padding: 0 3px 0 5px; */
 }
 
 .copyright-inner .copyright-text a span {
@@ -8406,3 +8418,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /* .offer-area {
     direction: ltr;
 } */
+
+ul {
+    list-style: none;
+}
