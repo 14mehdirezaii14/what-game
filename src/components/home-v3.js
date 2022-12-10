@@ -12,7 +12,8 @@ import Client from './section-components/client';
 import BlogSection from './blog-components/blog-section-v2';
 import Ads from './section-components/ads';
 import Instagram from './section-components/instagram';
-import Footer from './global-components/footer-v2';
+import Footer from './global-components/footer';
+import Offer from './section-components/offer';
 
 const Home_V3 = () => {
     return <div>
@@ -20,15 +21,7 @@ const Home_V3 = () => {
         <Banner />
         <Search />
         <UpcomingWorld />
-        <div className="destinations-list-slider-bg text-right">
-            
-            <div className="container">
-                hello
-            </div>
-            <h3 className='pr-5 text-light' style={{lineHeight:'56px'}}>
-            سورپرایز در <br /> مناسبت ها
-            </h3>
-        </div>
+        <Offer />
         {/* <Intro />
         <UpcomingTour />
         <Video />

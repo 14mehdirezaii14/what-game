@@ -5039,7 +5039,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     bottom: 0;
     width: 35%;
     height: 100%;
-    background: #F2A03D;
+    background: #FDA649;
     z-index: -1;
 }
 
@@ -8401,3 +8401,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .newslatter-wrap .vaijesubmit {
     color: #fff;
 }
+
+
+/* .offer-area {
+    direction: ltr;
+} */
