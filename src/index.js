@@ -23,7 +23,7 @@ import Blog from './components/blog';
 import BlogV2 from './components/blog-v2';
 import BlogV3 from './components/blog-v3';
 import BlogDetails from './components/blog-details';
-
+import TheGame from './components/TheGame/TheGame';
 
 
 class Root extends Component {
@@ -31,7 +31,7 @@ class Root extends Component {
 		return (
 			<HashRouter basename="/">
 					<Switch>
-						<Route exact path="/" component={HomeV1} />
+						<Route exact path="/" component={HomeV3} />
 						<Route path="/home-v2" component={HomeV2} />
 						<Route path="/home-v3" component={HomeV3} />
 						<Route path="/about" component={AboutUs} />
@@ -53,6 +53,7 @@ class Root extends Component {
 						<Route path="/blog-v2" component={BlogV2} />
 						<Route path="/blog-v3" component={BlogV3} />
 						<Route path="/blog-details" component={BlogDetails} />
+						<Route path="/the-game" component={TheGame} />
 					</Switch>
 			</HashRouter>
 			

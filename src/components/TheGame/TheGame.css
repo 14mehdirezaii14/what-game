@@ -1,0 +1,26 @@
+.videoTagGame {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.divVideoGame {
+    padding: 500px 0 112px;
+}
+
+.Game-information-box {
+    border-radius: 10px;
+    background-color: #B8B8B8;
+    /* padding: 10px; */
+}
+
+.Game-information-box>div>img {
+    border-radius: 10px;
+}
+
+.btn-game-reservation {
+    background-color: #FDA649;
+    border-radius: 10px;
+}

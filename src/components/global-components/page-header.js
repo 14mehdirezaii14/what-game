@@ -10,7 +10,7 @@ class Page_header extends Component {
         let Subheader = this.props.subheader ? this.props.subheader : HeaderTitle
 
         return (
-             <div className="breadcrumb-area jarallax" style={{backgroundImage: 'url('+publicUrl+'assets/img/bg/1.png)'}}>
+             <div className="breadcrumb-area jarallax" style={{backgroundImage: 'url('+publicUrl+'assets/img/bg/vasily-ledovsky-MkImkLEuqcY-unsplash-1.png)'}}>
 				  <div className="container">
 				    <div className="row">
 				      <div className="col-lg-12">
@@ -18,7 +18,7 @@ class Page_header extends Component {
 				          <h1 className="page-title">{ HeaderTitle }</h1>
 				          <ul className="page-list">
 				            {/* <li><Link to="/">Home</Link></li> */}
-				            <li>{ Subheader }</li>
+				            {/* <li>{ Subheader }</li> */}
 				          </ul>
 				        </div>
 				      </div>

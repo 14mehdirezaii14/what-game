@@ -62,9 +62,7 @@ class Navbar extends Component {
 			        <li className="menu-item-has-children text-right">
 			          <Link to="/">اتاق فرار</Link>
 			          <ul className="sub-menu">
-			            <li><Link to="/">Home 01</Link></li>
-			            <li><Link to="/home-v2">Home 02</Link></li>
-			            <li><Link to="/home-v3">Home 03</Link></li>
+			            <li><Link to="/the-game">The Game</Link></li>
 			          </ul>
 			        </li>
 			        {/* <li>

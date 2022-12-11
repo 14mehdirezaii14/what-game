@@ -1638,9 +1638,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .breadcrumb-area {
     text-align: center;
-    padding: 186px 0 112px;
+    padding: 500px 0 122px;
     background-size: cover;
     position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .breadcrumb-area:after {
@@ -1648,22 +1651,22 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
-    background: var(--main-color-two);
+    height: 40%;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(18, 18, 18, 0.87) 49%, #121212 122.45%);
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .breadcrumb-area .breadcrumb-inner {
-    position: relative;
+    position: absolute;
     z-index: 2;
+    right: 0;
 }
 
 .breadcrumb-area .page-title {
