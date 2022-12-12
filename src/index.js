@@ -24,12 +24,14 @@ import BlogV2 from './components/blog-v2';
 import BlogV3 from './components/blog-v3';
 import BlogDetails from './components/blog-details';
 import TheGame from './components/TheGame/TheGame';
-
-
+import Reservation from './components/reservation/Reservation';
+import { Provider } from 'react-redux';
+import store from './store/store';
 class Root extends Component {
 	render() {
 		return (
 			<HashRouter basename="/">
+				<Provider store={store}>
 					<Switch>
 						<Route exact path="/" component={HomeV3} />
 						<Route path="/home-v2" component={HomeV2} />
@@ -54,9 +56,11 @@ class Root extends Component {
 						<Route path="/blog-v3" component={BlogV3} />
 						<Route path="/blog-details" component={BlogDetails} />
 						<Route path="/the-game" component={TheGame} />
+						<Route path="/reservation" component={Reservation} />
 					</Switch>
+				</Provider>
 			</HashRouter>
-			
+
 		)
 	}
 }

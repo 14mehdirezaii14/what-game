@@ -1,0 +1,105 @@
+.step1>span {
+    padding: 5px 14px 5px 14px;
+    border-radius: 50%;
+    border: 3px solid #FDA649;
+    color: #FDA649;
+    position: relative;
+    right: 30px;
+}
+
+.step1::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    right: 85px;
+    background-color: #707A8C;
+    top: 15px;
+}
+
+.stepYellow>div {
+    color: #FDA649;
+}
+
+.stepYellow>span {
+    background-color: #FDA649;
+    color: white;
+}
+
+.step1AfterYellow::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    right: 85px;
+    background-color: #FDA649;
+    top: 15px;
+}
+
+
+/*  */
+
+.step2 {
+    right: 185px;
+    position: relative;
+}
+
+.step2>span {
+    padding: 5px 14px 5px 14px;
+    border: 3px solid #707A8C;
+    border-radius: 50px;
+    position: relative;
+    right: 25px;
+}
+
+.step2::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    right: 65px;
+    background-color: #707A8C;
+    top: 15px;
+}
+
+
+/*  */
+
+.step3 {
+    right: 400px;
+    position: relative;
+}
+
+.step3>span {
+    padding: 5px 14px 5px 14px;
+    border: 3px solid #707A8C;
+    border-radius: 50px;
+    position: relative;
+    right: 17px;
+}
+
+.step3::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    right: 60px;
+    background-color: #707A8C;
+    top: 15px;
+}
+
+
+/*  */
+
+.step4 {
+    right: 610px;
+    position: relative;
+}
+
+.step4>span {
+    padding: 5px 14px 5px 14px;
+    border: 3px solid #707A8C;
+    border-radius: 50px;
+    position: relative;
+    right: 15px;
+}
