@@ -3,7 +3,8 @@ import Navbar from "../global-components/navbar";
 import PageHeader from '../global-components/page-header';
 import Gameinformationbox from "../Gameinformationbox/Gameinformationbox";
 import './reservation.css';
-import Step1 from "./Step1";
+import Step1 from "./Step1/Step1";
+import Step2 from "./Step2/Step2";
 import { useSelector, useDispatch } from 'react-redux'
 const Reservation = () => {
     const state = useSelector((state) => state)
@@ -30,17 +31,6 @@ const Reservation = () => {
 
 
                             </div>
-                            {/* {state.step === 1 ?
-                                <div className="step1 d-inline-block">
-                                    <span className="">1</span>
-
-                                    <div className="mt-4" style={{ color: '#FDA649' }}>
-                                        قوانین و مقررات
-                                    </div>
-
-
-                                </div> : 'ss'
-                            } */}
                             <div className="step2 d-inline-block">
                                 <span className="">2</span>
                                 <div className="mt-4 mr-2">
@@ -63,7 +53,7 @@ const Reservation = () => {
                         {
                             state.step === 1 ?
                                 <Step1 /> : state.step === 2 ?
-                                    'step2' : state.step === 3 ?
+                                    <Step2 /> : state.step === 3 ?
                                         'step3' : 'step4'
                         }
 

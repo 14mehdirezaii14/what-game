@@ -6,7 +6,7 @@ const Step1 = () => {
     const state = useSelector((state) => state)
     const dispatch = useDispatch()
     return (
-        <>
+        <div className="pl-4">
             <div className="row">
                 <div className="col-12">
                     <h4 className="mt-5">
@@ -41,7 +41,7 @@ const Step1 = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -1,4 +1,4 @@
-function reservation(state = { step: 1 }, action) {
+function reservation(state = { step: 2 }, action) {
     switch (action.type) {
         case 'step1':
             return { step: state.step + 1 }

@@ -103,3 +103,94 @@
     position: relative;
     right: 15px;
 }
+
+.datepicker-input {
+    display: none;
+}
+
+.calendarContainer {
+    direction: rtl;
+    top: 0;
+    width: 100% !important;
+    right: 0;
+    background-color: #121212 !important;
+    color: #707A8C !important;
+    box-shadow: none !important;
+}
+
+.CalendarParent {
+    border: 1px solid #FDA649 !important;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dayWrapper>button {
+    color: #707A8C !important;
+}
+
+.tether-element {
+    transform: none !important;
+    top: 500px !important;
+    right: 0px !important;
+}
+
+.calendarContainer .heading .title {
+    float: right !important;
+    border: none !important;
+    color: white !important;
+}
+
+.calendarContainer .heading .title:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.calendarContainer .heading .prev {
+    border: 3px solid #FDA649;
+    position: absolute;
+    left: 70px;
+}
+
+.calendarContainer .heading .prev:hover {
+    background-color: #FDA649;
+}
+
+.calendarContainer .heading .next {
+    border: 3px solid #FDA649;
+}
+
+.calendarContainer .heading .next:hover {
+    background-color: #FDA649;
+}
+
+.calendarButton {
+    display: none !important;
+}
+
+.calendarContainer .dayWrapper button[disabled] {
+    background-color: #BCBCBC !important;
+    border-radius: 0px !important;
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.calendarContainer .dayWrapper button {
+    border-radius: 0px !important;
+    width: 60px !important;
+    height: 60px !important;
+    color: white !important;
+    background-color: #496E4C !important;
+    margin-top: 10px;
+}
+
+.currentMonth>button {
+    background-color: #496E4C !important;
+    border: 3px;
+}
+
+.calendarContainer .dayWrapper:not(.currentMonth) button {
+    display: none;
+}
+
+.calendarContainer .selected button {
+    background-color: #3058C5 !important;
+}
