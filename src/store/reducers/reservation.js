@@ -9,4 +9,4 @@ function reservation(state = { step: 2 }, action) {
     }
 }
 
-export default reservation
+export default reservation 
