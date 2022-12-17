@@ -1,18 +1,32 @@
+@media screen and (max-width: 880px) {
+    .step1::after {
+        content: '';
+        display: none;
+    }
+    .step2::after {
+        content: '';
+        display: none;
+    }
+    .step3::after {
+        content: '';
+        display: none;
+    }
+}
+
 .step1>span {
     padding: 5px 14px 5px 14px;
     border-radius: 50%;
     border: 3px solid #FDA649;
     color: #FDA649;
     position: relative;
-    right: 30px;
 }
 
 .step1::after {
     content: '';
     position: absolute;
-    width: 250px;
+    width: 265px;
     height: 1px;
-    right: 85px;
+    right: 195px;
     background-color: #707A8C;
     top: 15px;
 }
@@ -23,24 +37,33 @@
 
 .stepYellow>span {
     background-color: #FDA649;
-    color: white;
+    color: white !important;
 }
 
 .step1AfterYellow::after {
     content: '';
     position: absolute;
-    width: 250px;
+    width: 265px;
     height: 1px;
-    right: 85px;
     background-color: #FDA649;
     top: 15px;
+}
+
+.step2AfterYellow::after {
+    content: '';
+    position: absolute !important;
+    background-color: #FDA649 !important;
+}
+
+.step2Yellow>span {
+    border: 3px solid #FDA649 !important;
+    color: #FDA649;
 }
 
 
 /*  */
 
 .step2 {
-    right: 185px;
     position: relative;
 }
 
@@ -49,24 +72,22 @@
     border: 3px solid #707A8C;
     border-radius: 50px;
     position: relative;
-    right: 25px;
 }
 
 .step2::after {
     content: '';
     position: absolute;
-    width: 250px;
+    width: 258px;
     height: 1px;
-    right: 65px;
     background-color: #707A8C;
     top: 15px;
+    right: 60px;
 }
 
 
 /*  */
 
 .step3 {
-    right: 400px;
     position: relative;
 }
 
@@ -75,7 +96,6 @@
     border: 3px solid #707A8C;
     border-radius: 50px;
     position: relative;
-    right: 17px;
 }
 
 .step3::after {
@@ -83,16 +103,15 @@
     position: absolute;
     width: 250px;
     height: 1px;
-    right: 60px;
     background-color: #707A8C;
     top: 15px;
+    right: 65px;
 }
 
 
 /*  */
 
 .step4 {
-    right: 610px;
     position: relative;
 }
 
@@ -101,7 +120,6 @@
     border: 3px solid #707A8C;
     border-radius: 50px;
     position: relative;
-    right: 15px;
 }
 
 .datepicker-input {
@@ -193,4 +211,64 @@
 
 .calendarContainer .selected button {
     background-color: #3058C5 !important;
+}
+
+.ChooseAnHour {
+    border-radius: 10px;
+    border: 1px solid #FDA649;
+}
+
+.ChooseAnHour::after {
+    display: inline-block;
+    width: 0px;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    float: left;
+    top: 14px;
+    position: relative;
+    font-size: 20px;
+    color: #FDA649;
+}
+
+.input {
+    background-color: #121212;
+    border-radius: 10px;
+    border: 1px solid #FDA649;
+}
+
+.input:focus {
+    background-color: #121212 !important;
+    border-radius: 10px;
+    border: 1px solid #FDA649 !important;
+    color: white !important;
+}
+
+.progressStep3>span {
+    border: 3px solid #FDA649 !important;
+    color: #FDA649 !important;
+}
+
+.completeStep3>span {
+    background-color: #FDA649;
+    color: white !important;
+}
+
+.completeStep3>div {
+    color: #FDA649 !important;
+}
+
+.completeStep3::after {
+    content: '';
+    background-color: #FDA649;
+}
+
+.progressStep4>span {
+    border: 3px solid #FDA649 !important;
+    color: #FDA649 !important;
 }

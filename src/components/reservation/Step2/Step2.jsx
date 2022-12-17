@@ -3,16 +3,28 @@ import React, { useState, useEffect, useRef } from "react";
 import { Calendar } from 'react-datepicker2';
 import momentJalaali from 'moment-jalaali';
 
+import { useSelector, useDispatch } from 'react-redux'
 
 const Step2 = () => {
     const [stateBtn, setStateBtn] = useState(true)
-    const [value, setValue] = useState(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD'))
+    const [date, setDate] = useState(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD'))
+    const [time, setTime] = useState('انتخاب سانس')
+    const [numberOfPeople, setNumberOfPeople] = useState('انتخاب نفرات')
     const datePickerRef = useRef(null)
+    const state = useSelector((state) => state)
+    const dispatch = useDispatch()
+
     useEffect(() => {
-        // console.log(momentJalaali().add(2, 'days'))
-        // console.log(momentJalaali().subtract('1401/9/24', 'day'))
-        console.log(new Date().toLocaleDateString())
-    }, [value])
+        if (time !== 'انتخاب سانس' && numberOfPeople !== 'انتخاب نفرات') {
+            setStateBtn(false)
+            console.log('hello')
+        }
+    }, [numberOfPeople, time])
+
+    const next = () => {
+        dispatch({ type: 'setDate',peyload:{date,numberOfPeople,time} })
+        dispatch({ type: 'step2' })
+    }
     return (
         <div className="py-5 my-5">
             <h3 className="my-5 py-5">
@@ -24,7 +36,7 @@ const Step2 = () => {
             </p>
             <div className="CalendarParent">
                 <Calendar
-                    value={value}
+                    value={date}
                     ranges={[
                         {
                             disabled: true,
@@ -45,10 +57,10 @@ const Step2 = () => {
                     // ref={datePickerRef}
                     onChange={value => {
                         console.log(value.format("YYYY/M/D"))
-                        setValue(value)
+                        setDate(value.format("YYYY/M/D"))
                     }}
                     timePicker={false}
-                    
+
 
                 />
                 {/* Help calendar */}
@@ -65,9 +77,43 @@ const Step2 = () => {
                     </p>
                 </div>
             </div>
+            {/*  */}
+            <div>
+                <p className="text-light my-4">روز انتخابی شما: چهارشنبه ۱۶ آذر ۱۴۰۱</p>
+            </div>
+            {/* Choose an hour */}
+            <p className="mt-4 text-light">انتخاب سانس</p>
+            <div className="dropdown ">
+                <a href="#" className="ChooseAnHour py-2 px-3 text-right btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {time}
+
+                </a>
+                <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
+                    {/*  */}
+                    <a type="button" onClick={() => setTime('ساعت 18')} className=" py-2 px-3 text-right btn-block" >
+                        ساعت 18
+                    </a>
+                    {/*  */}
+                </div>
+            </div>
+            {/* number of people */}
+            <p className="mt-4 text-light">تعداد افراد</p>
+            <div className="dropdown ">
+                <a href="#" className="ChooseAnHour py-2 px-3 text-right btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {numberOfPeople}
+                </a>
+                <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
+                    {/*  */}
+                    <a type="button" onClick={() => setNumberOfPeople('5 نفر ')} className=" py-2 px-3 text-right btn-block" >
+                        5نفر
+                    </a>
+                    {/*  */}
+
+                </div>
+            </div>
             <div className="d-flex justify-content-between mt-5" >
-                <button className="btn btn-gray" disabled={stateBtn}>قبلی</button>
-                <button className="btn btn-game-reservation" disabled={stateBtn}>بعدی</button>
+                <button className="btn btn-gray"  onClick={() => dispatch({type:'step0'})}>قبلی</button>
+                <button className="btn btn-game-reservation" onClick={next} disabled={stateBtn}>بعدی</button>
             </div>
         </div>
     )
