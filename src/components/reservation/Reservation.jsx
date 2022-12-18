@@ -8,6 +8,7 @@ import Step2 from "./Step2/Step2";
 import Step3 from "./step3/step3";
 import Step4 from "./Step4/Step4";
 import { useSelector, useDispatch } from 'react-redux'
+import Broadcast from "../broadcast/Broadcast";
 const Reservation = () => {
     const state = useSelector(state => state)
     const dispatch = useDispatch()
@@ -18,6 +19,7 @@ const Reservation = () => {
         <>
             <Navbar />
             <PageHeader img={`assets/img/reservation/julius-drost-Ariu17epnPk-unsplash.png`} />
+            <Broadcast linkList={[{ src: '/', pageName: 'صفحه اصلی' }, { src: '/the-game', pageName: 'اتاق فرار ایستگاه' }, { src: '/', pageName: 'رزرو اتاق فرار ایستگاه' }]} />
             <div className="container my-5 ">
                 <div className="row">
                     <div className="col-md-9 text-right">
