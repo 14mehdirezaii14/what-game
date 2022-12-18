@@ -13,7 +13,7 @@ class Navbar extends Component {
 					<div className="responsive-mobile-menu">
 						<div className="mobile-logo">
 							<Link to="/">
-								<img src={publicUrl + "assets/img/LOGO N.-give me s 1.png"} alt={imgattr} />
+								<img src={publicUrl + "assets/img/unnamed.png"} alt={imgattr} />
 							</Link>
 						</div>
 						<button className="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#tp_main_menu" aria-expanded="false" aria-label="Toggle navigation">

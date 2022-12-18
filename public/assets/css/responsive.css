@@ -1,16 +1,17 @@
-@media only screen and (min-width: 1800px){
+@media only screen and (min-width: 1800px) {
     .container-bg {
-    	max-width: 1750px;
-    	margin: 0 auto;
+        max-width: 1750px;
+        margin: 0 auto;
     }
 }
-@media only screen and (min-width: 1600px){
+
+@media only screen and (min-width: 1600px) {
     .nav-style-02 .dropdown-menu-btn {
         margin-left: 160px;
     }
 }
 
-@media only screen and (max-width: 1680px){
+@media only screen and (max-width: 1680px) {
     .banner-slider .banner-slider-item .banner-inner .banner-cat {
         font-size: 16px;
     }
@@ -73,18 +74,16 @@
         float: left;
         margin-top: 20px;
     }
-
-
-
     .widget-instagram-feed li a {
         width: 80px;
         height: auto;
     }
-
 }
 
+
 /* Medium Layout: 1550px. */
-@media only screen and (max-width: 1550px){
+
+@media only screen and (max-width: 1550px) {
     .navbar-area .nav-container .desktop-logo img {
         max-width: 115px;
     }
@@ -164,10 +163,11 @@
         line-height: 40px;
         margin: 0 5px;
     }
-    .tp-pagination ul li .page-numbers.prev, .tp-pagination ul li .page-numbers.next {
+    .tp-pagination ul li .page-numbers.prev,
+    .tp-pagination ul li .page-numbers.next {
         line-height: 43px;
     }
-    .tp-pagination ul li .page-numbers.prev i, 
+    .tp-pagination ul li .page-numbers.prev i,
     .tp-pagination ul li .page-numbers.next i {
         line-height: 40px;
         font-size: 24px;
@@ -185,9 +185,6 @@
     .newslatter-area-wrap {
         padding: 67px 0 70px 0;
     }
-
-
-
     /****** home 1 responsive ******/
     .navbar-area .nav-container .desktop-logo {
         margin-right: 100px;
@@ -274,21 +271,13 @@
     .faq-tab-content {
         padding: 50px 80px 100px 30px;
     }
-
     .tp-holiday-plan-area.mg-top-96 {
         margin-top: 102px;
     }
-
-
-
-
-
     /******* home 2 responsive ********/
     .video-banner-area .video-banner-content-wrap .video-banner-content h2 {
         font-size: 70px;
     }
-
-
     /******* home 5 *******/
     .banner-slider-two .banner-inner {
         padding: 250px 75px;
@@ -300,8 +289,6 @@
         font-size: 20px;
         margin-top: 5px;
     }
-
-
     /**** about page responsive ******/
     .single-destination-grid .details .d-list-meta li.date {
         font-size: 15px;
@@ -315,8 +302,6 @@
     .tour-details-area .package-included-location {
         margin-bottom: 84px;
     }
-
-
     /****** blog page responsive ******/
     .tp-blockquote p {
         font-size: 15px;
@@ -327,9 +312,6 @@
     .breadcrumb-area .page-title {
         font-size: 46px;
     }
-
-
-    
     /****** 404 page responsive ********/
     .error-page-info h1 {
         font-size: 300px;
@@ -344,9 +326,6 @@
     .error-page-info .error-page-info-details p {
         font-size: 14px;
     }
-
-
-
     /****** footer responsive *********/
     .newslatter-wrap .input-group-text {
         height: 55px;
@@ -370,6 +349,7 @@
         height: auto;
     }
 }
+
 @media (min-width: 1490px) and (max-width: 1550px) {
     .tps-arrow-left-right .slick-prev {
         left: -15px;
@@ -384,9 +364,9 @@
     .single-client-review {
         margin-top: 5px;
     }
-
 }
-@media only screen and (max-width: 1445px){
+
+@media only screen and (max-width: 1445px) {
     .banner-paginations-3 {
         max-width: 1205px;
     }
@@ -452,7 +432,6 @@
         font-size: 13px;
         margin-right: 15px;
     }
-
     .single-host-wrap .thumb {
         padding: 9px;
     }
@@ -463,7 +442,6 @@
     .tour-details-area .package-included-location {
         margin-bottom: 70px;
     }
-
     .widget_tag_cloud .tagcloud a {
         margin-bottom: 6px;
     }
@@ -477,15 +455,15 @@
         padding-top: 80px;
     }
     .single-upconing-card .content {
-        max-height: 60px;
+        height: 40%;
         padding: 8px;
     }
-
-
 }
 
+
 /* Medium Layout: 1280px. */
-@media only screen and (max-width: 1280px){
+
+@media only screen and (max-width: 1280px) {
     .banner-paginations-3 {
         max-width: 1050px;
     }
@@ -540,17 +518,12 @@
     .login-form-wrap h4 {
         margin-bottom: 20px;
     }
-
-
     .faq-tab-content {
         padding: 50px 15px 0 15px;
     }
     .tp-gallery-item-img .details p br {
         display: none;
     }
-
-
-
     /****** home 1 responsive ******/
     .navbar-area .nav-container .nav-right-content ul li .btn {
         padding: 0 15px;
@@ -567,7 +540,6 @@
     .tp-lang-wrap .single-select .list li {
         padding: 0 12px !important;
     }
-
     /******* home 3 *********/
     .single-package-card .details {
         padding: 15px;
@@ -583,14 +555,10 @@
     .single-upconing-card .tp-price-meta {
         top: 25px;
     }
-
-
     /*********** home 4 ********/
     .package-meta .tp-price-meta h2 {
         font-size: 18px;
     }
-
-
     /***** home 5 ******/
     .banner-slider-two .banner-inner {
         padding: 250px 55px;
@@ -602,16 +570,13 @@
     .banner-slider-two .banner-inner .title-and-video .video-popup-btn {
         padding: 3px;
     }
-   .banner-slider-two .banner-inner .title-and-video .video-popup-btn.style-two .video-play-btn {
+    .banner-slider-two .banner-inner .title-and-video .video-popup-btn.style-two .video-play-btn {
         height: 40px;
         width: 40px;
         font-size: 14px;
         line-height: 40px;
         padding-left: 1px;
     }
-
-
-
     /******* destination list respnsive *******/
     .single-destination-grid .details {
         padding: 30px 20px;
@@ -667,10 +632,6 @@
     .single-host-wrap {
         padding: 0 20px 70px 20px;
     }
-
-
-
-
     /******** home 2 responsive ********/
     .video-banner-area .video-banner-wrap {
         height: 100vh;
@@ -678,8 +639,6 @@
     .video-banner-area .video-banner-wrap .tv {
         transform: scale(1.3) !important;
     }
-
-
     /******* blog responsive ********/
     .widget-title {
         padding-left: 25px;
@@ -691,7 +650,7 @@
         padding: 3px 20px 3px 25px;
     }
     .widget-recent-post ul li {
-        padding: 20px 20px  20px 25px;
+        padding: 20px 20px 20px 25px;
     }
     .widget-recent-post ul li .media img {
         width: 85px;
@@ -704,8 +663,6 @@
     .widget_tag_cloud .tagcloud {
         padding: 0 20px 0 20px;
     }
-
-
     /***** 404 responsive *****/
     .error-page-info h1 {
         font-size: 230px;
@@ -721,17 +678,15 @@
     .error-page-area:before {
         height: 60%;
     }
-
-
-
     /****** footer resopnsive ******/
     .widget-instagram-feed li a {
         width: 70px;
     }
-
 }
 
+
 /* Medium Layout: 1024px. */
+
 @media only screen and (max-width: 1100px) {
     .banner-paginations-3 {
         max-width: 910px;
@@ -764,7 +719,6 @@
     .tp-search-single-wrap .nice-select {
         padding: 0 19px;
     }
-
     .tp-search-single-wrap .nice-select .current,
     .tp-search-single-wrap input {
         font-size: 13px;
@@ -778,8 +732,6 @@
     .newslatter-area-wrap {
         padding: 61px 0 66px 0;
     }
-
-
     .navbar-area .nav-container .desktop-logo {
         margin-right: 60px;
     }
@@ -868,8 +820,6 @@
         padding: 20px;
         max-height: 70px;
     }
-
-
     /******* home 2 responsive ********/
     .video-banner-area .video-banner-content-wrap .video-banner-content h2 {
         font-size: 60px;
@@ -878,9 +828,6 @@
         height: 720px;
         margin-top: -100px;
     }
-
-
-
     /******* home 3 ********/
     .main-banner-area h1 {
         font-size: 110px;
@@ -906,27 +853,23 @@
     .single-travelus h4 {
         font-size: 15px;
     }
-    .single-travelus-wrap:nth-child(1):after, 
+    .single-travelus-wrap:nth-child(1):after,
     .single-travelus-wrap:nth-child(3):after {
         top: -25px;
     }
     .single-travelus-wrap:nth-child(2):after {
         bottom: -100px;
     }
-
-
     /********* home 4 *******/
-    .upcomming-card-slider-3 .slick-active + .slick-active {
+    .upcomming-card-slider-3 .slick-active+.slick-active {
         margin-top: 15px;
     }
-    .upcomming-card-slider-3 .slick-active + .slick-active + .slick-active {
+    .upcomming-card-slider-3 .slick-active+.slick-active+.slick-active {
         margin-top: 15px;
     }
-    .upcomming-card-slider-3 .slick-active + .slick-active + .slick-active  + .slick-active {
+    .upcomming-card-slider-3 .slick-active+.slick-active+.slick-active+.slick-active {
         margin-top: 15px;
     }
-
-
     /******** home 5 ******/
     .banner-slider-two .swiper-slide {
         width: 50%;
@@ -946,8 +889,6 @@
     .banner-slider-two .banner-inner .banner-title {
         font-size: 36px;
     }
-
-
     /****** destination style ******/
     .tp-tour-list-search-area .single-input-wrap {
         margin-bottom: 30px;
@@ -956,8 +897,6 @@
         margin-top: 13px;
         margin-bottom: 15px;
     }
-
-
     /******* blog responsive ********/
     .single-blog.style-two .single-blog-details {
         padding: 20px 20px;
@@ -975,7 +914,6 @@
     .single-blog .author {
         font-size: 12px;
     }
-
     .comming-soon-title {
         font-size: 50px;
     }
@@ -996,10 +934,7 @@
     .newslatter-area-blog.pd-top-108 {
         padding-top: 112px;
     }
-
-
 }
-
 
 @media (min-width: 992px) and (max-width: 1100px) {
     .banner-slider-3 .banner-slider-item {
@@ -1013,6 +948,7 @@
 
 
 /* Tablet Layout: 991px. */
+
 @media only screen and (max-width: 991px) {
     .banner-slider-two .banner-inner .banner-title {
         font-size: 28px;
@@ -1127,16 +1063,12 @@
     .client-slider .slick-next {
         margin-right: -55px;
     }
-
     .tp-holiday-plan-area.mg-top-96 {
         margin-top: 100px;
     }
     .client-review-area-home.pd-top-70 {
         padding-top: 83px;
     }
-
-
-
     /******** home 2 responsive ********/
     .video-banner-area .video-banner-content-wrap .video-banner-content h2 {
         font-size: 36px;
@@ -1147,8 +1079,6 @@
     .video-banner-area .video-banner-wrap .tv {
         transform: scale(2.0) !important;
     }
-
-
     /******* home 3 responsive ********/
     .main-banner-area {
         height: auto;
@@ -1182,7 +1112,6 @@
     .upcomming-tour.upcomming-tour-bg.pd-top-75 {
         padding-top: 75px;
     }
-
     /******** home 4 ********/
     .banner-slider-3 .slick-next {
         left: auto !important;
@@ -1203,8 +1132,6 @@
     .single-travelus-wrap:nth-child(4) {
         display: none;
     }
-
-
     /****** home 5 *******/
     .banner-slider-two .swiper-slide {
         transform: translate3d(-195px, 0px, 20px) rotateX(0deg) rotateY(0deg) !important;
@@ -1228,9 +1155,6 @@
         font-size: 14px;
         line-height: 20px;
     }
-
-
-
     /****** about page responsive *******/
     .about-section-right-thumb .about-absolute-thumb {
         display: none;
@@ -1252,8 +1176,6 @@
     .login-form-wrap {
         margin: 30px 30px 30px 58px;
     }
-
-
     /******* user profile *******/
     .tp-tabs.style-two {
         margin-bottom: 50px;
@@ -1268,9 +1190,6 @@
     .user-payment-method .user-payment-card {
         text-align: left;
     }
-
-
-
     /******* destination details *******/
     .destinations-details-main-slider-controls {
         left: 20px;
@@ -1313,13 +1232,11 @@
     .sidebar-area.sidebar-area-inner-page {
         margin-top: 113px;
     }
-
-
     /****** blog responsive ******/
     .single-blog-post-tags {
         margin-top: 30px;
     }
-    .single-post-navigation .nav-previous, 
+    .single-post-navigation .nav-previous,
     .single-post-navigation .nav-next {
         border: 0;
         border-radius: 0;
@@ -1345,8 +1262,6 @@
     .breadcrumb-area.style-three {
         padding: 220px 0 0 0;
     }
-
-
     /***** 404 responsive *****/
     .error-page-area {
         min-height: 800px;
@@ -1366,12 +1281,11 @@
     .single-page-small-title {
         line-height: 28px;
     }
-
-
 }
 
 
 /* medium tablet layout 767px */
+
 @media only screen and (max-width: 767px) {
     .search-popup .search-form {
         min-width: 85%;
@@ -1416,10 +1330,11 @@
         line-height: 39px;
         margin: 0 3px;
     }
-    .tp-pagination ul li .page-numbers.prev, .tp-pagination ul li .page-numbers.next {
+    .tp-pagination ul li .page-numbers.prev,
+    .tp-pagination ul li .page-numbers.next {
         line-height: 40px;
     }
-    .tp-pagination ul li .page-numbers.prev i, 
+    .tp-pagination ul li .page-numbers.prev i,
     .tp-pagination ul li .page-numbers.next i {
         line-height: 38px;
     }
@@ -1461,15 +1376,11 @@
     .newslatter-area-wrap {
         padding: 61px 0 70px 0;
     }
-
-
     /******* home 2 responsive *******/
     .video-banner-area .video-banner-wrap {
         height: 595px;
         margin-top: -170px;
     }
-
-
     /******** home3 ********/
     .main-banner-area .content {
         padding: 200px 0 120px 0;
@@ -1480,7 +1391,7 @@
     .main-banner-area .shadow {
         margin-top: -55px;
     }
-    .upcomming-card-slider-1 .slick-arrow  {
+    .upcomming-card-slider-1 .slick-arrow {
         display: none !important;
     }
     .counter-area {
@@ -1512,8 +1423,6 @@
     .footer-area.style-two .copyright-inner {
         text-align: center;
     }
-
-
     /********* home 4 **********/
     .tp-main-search-3 .tp-main-search {
         padding: 0 25px 0;
@@ -1540,8 +1449,6 @@
     .single-travelus-wrap:nth-child(1):after {
         top: -26px;
     }
-
-
     /******** home 5 *******/
     .banner-slider-two .swiper-slide {
         width: 100%;
@@ -1558,15 +1465,11 @@
     .banner-slider-two .banner-inner .title-and-video .video-popup-wrap {
         width: 37%;
     }
-    
-
     /***** destination-list ******/
     .single-destinations-list.style-three .list-price-meta .tp-price-meta {
         padding-left: 10px;
         margin-left: 10px;
     }
-
-
     /******* blog responsive *******/
     .tp-blockquote {
         padding: 22px 20px 22px 22px;
@@ -1586,13 +1489,11 @@
     .blog-area .sidebar-area {
         margin-top: 112px;
     }
-
     /***** 404 responsive *****/
     .error-page-area .logo-wrapper {
         left: 50%;
         margin-left: -45px;
     }
-    
     .comming-soon-info-wrap {
         min-height: 800px;
     }
@@ -1605,14 +1506,11 @@
         padding-top: 30px;
         background-color: transparent;
     }
-
     /****** footer responsive ******/
     .copyright-inner .copyright-text {
         line-height: 30px;
         padding: 0 15px;
     }
-
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -1621,8 +1519,7 @@
     }
 }
 
-@media only screen and (max-width: 575px){
-
+@media only screen and (max-width: 575px) {
     .section-title {
         margin-bottom: 33px;
     }
@@ -1677,10 +1574,11 @@
         line-height: 37px;
         margin: 0 3px;
     }
-    .tp-pagination ul li .page-numbers.prev, .tp-pagination ul li .page-numbers.next {
+    .tp-pagination ul li .page-numbers.prev,
+    .tp-pagination ul li .page-numbers.next {
         line-height: 38px;
     }
-    .tp-pagination ul li .page-numbers.prev i, 
+    .tp-pagination ul li .page-numbers.prev i,
     .tp-pagination ul li .page-numbers.next i {
         line-height: 36px;
         font-size: 24px;
@@ -1695,10 +1593,6 @@
         margin-left: 0;
         margin-right: 0;
     }
-
-
-
-
     .responsive-mobile-menu .mobile-logo img {
         width: 87px;
     }
@@ -1741,7 +1635,7 @@
     .banner-slider .banner-slider-item .banner-inner .banner-cat {
         margin-bottom: 0;
     }
-    .banner-slider  .video-popup-btn .video-play-btn {
+    .banner-slider .video-popup-btn .video-play-btn {
         height: 38px;
         width: 38px;
         font-size: 11px;
@@ -1764,7 +1658,7 @@
     }
     .banner-social-meta .social-icon li {
         margin: 0 2px;
-    } 
+    }
     .single-destinations-list.style-two .thumb img {
         width: 100%;
     }
@@ -1795,15 +1689,12 @@
     .single-gallery-area .gallery-title {
         padding: 0 20px;
     }
-
     .tp-holiday-plan-area.mg-top-96 {
         margin-top: 108px;
     }
     .destination-grid-area.pd-top-105 {
         padding-top: 114px;
     }
-
-
     /******** home 2 responsive *********/
     .video-banner-area .video-banner-wrap {
         height: 600px;
@@ -1820,7 +1711,6 @@
     .video-banner-content-wrap {
         margin-top: 65px;
     }
-
     /****** home 3 *******/
     .main-banner-area .content {
         padding: 150px 0 150px 0;
@@ -1842,7 +1732,7 @@
     }
     .footer-area.style-two .footer-widget .widget-contact p {
         text-align: center !important;
-    } 
+    }
     .upcomming-card-slider-2 .single-upconing-card {
         margin: 10px;
     }
@@ -1852,8 +1742,6 @@
     .banner-slider-3 .video-popup-btn {
         top: 30px;
     }
-
-
     /******* home 4 *********/
     .single-travelus-wrap {
         margin-bottom: 40px;
@@ -1877,8 +1765,6 @@
     .upcomming-card-slider-3 .single-upconing-card .details h3 {
         font-size: 18px;
     }
-
-
     /****** user profile ********/
     .tp-img-upload {
         display: inherit;
@@ -1886,8 +1772,6 @@
     .tp-img-upload .tp-avatar-preview {
         margin-bottom: 30px;
     }
-
-    
     /***** destination-list ******/
     .single-destinations-list.style-three .thumb {
         flex: 0 0 100%;
@@ -1905,8 +1789,6 @@
     .tour-details-area .package-included-location {
         margin-bottom: 64px;
     }
-
-
     /****** blog-responsive ******/
     .single-blog.single-blog-wrap.style-two {
         display: inline-block;
@@ -1966,8 +1848,6 @@
     .newslatter-area-blog.pd-top-108 {
         padding-top: 120px;
     }
-    
-    
     .comming-soon-info-wrap {
         padding: 110px 0 115px 0;
     }
@@ -1988,9 +1868,6 @@
     .comming-soon-page .logo-wrapper img {
         width: 100px;
     }
-
-    
-
     /**** footer responsive *****/
     .back-to-top {
         right: 20px;
@@ -2000,13 +1877,6 @@
         line-height: 40px;
         font-size: 18px;
     }
-
-
-
-
-
-
-
     /* Padding Margin classes */
     .pd-top-50 {
         padding-top: 20px;
@@ -2032,10 +1902,10 @@
     .pd-top-108 {
         padding-top: 78px;
     }
-    .pd-top-100{
+    .pd-top-100 {
         padding-top: 70px;
     }
-    .pd-top-110{
+    .pd-top-110 {
         padding-top: 80px;
     }
     .pd-top-112 {
@@ -2047,7 +1917,6 @@
     .pd-top-142 {
         padding-top: 112px;
     }
-
     .pd-bottom-70 {
         padding-bottom: 50px;
     }
@@ -2069,8 +1938,6 @@
     .pd-default-3 {
         padding: 62px 0;
     }
-
-
     .mg-top-92 {
         margin-top: 62px;
     }
@@ -2092,11 +1959,8 @@
     .mg-bottom-100 {
         margin-bottom: 70px;
     }
-
-
-
     .tp-holiday-plan-area.mg-top-96 {
-       margin-top: 68px; 
+        margin-top: 68px;
     }
     .client-review-area-home.pd-top-70 {
         padding-top: 42px;
@@ -2150,14 +2014,9 @@
     .upcomming-tour.upcomming-tour-bg.pd-top-75 {
         padding-top: 40px;
     }
-
-
-
-
-
 }
 
-@media only screen and (max-width: 376px){
+@media only screen and (max-width: 376px) {
     #ui-datepicker-div {
         left: 15px !important;
     }
@@ -2183,7 +2042,8 @@
         background-size: cover;
     }
 }
-@media only screen and (max-width: 370px){
+
+@media only screen and (max-width: 370px) {
     .video-banner-area .video-banner-wrap {
         height: 520px;
     }
@@ -2231,7 +2091,7 @@
     }*/
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 320px) {
     .banner-slider-controls {
         display: none;
     }
@@ -2243,7 +2103,9 @@
     }
 }
 
+
 /* container width screen */
+
 @media (min-width: 1500px) and (max-width: 1700px) {
     .container {
         max-width: 1440px;
@@ -2259,6 +2121,7 @@
         z-index: 2;
     }
 }
+
 @media (min-width: 1300px) and (max-width: 1499px) {
     .container {
         max-width: 1240px;
@@ -2267,7 +2130,8 @@
         margin: 0px 40px;
     }
 }
-@media only screen and (min-width: 1800px){
+
+@media only screen and (min-width: 1800px) {
     .container {
         max-width: 1640px;
     }
