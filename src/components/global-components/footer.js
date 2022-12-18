@@ -18,8 +18,8 @@ class Footer_v1 extends Component {
 		let imgattr = "Footer logo"
 
 		return (
-			<footer className="footer-area" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/bg/2.png)' }}>
-				<div className="container">
+			<footer className="footer-area" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/bg/Footer.png)' }}>
+				<div className="container z1" style={{zIndex:1}}>
 					<div className="row text-right">
 						<div className="col-lg-4 col-md-6">
 							<div className="footer-widget widget">
@@ -31,20 +31,20 @@ class Footer_v1 extends Component {
 									<p>We believe brand interaction is key in commu- nication. Real innovations and a positive customer experience are the heart of successful communication.</p>
 									<div className="d-flex mb-5">
 										<div className="bg-light rounded">
-										<img src={publicUrl + "assets/img/Electronic-trust-symbol.png"} alt="" />ّ
+											<img src={publicUrl + "assets/img/Electronic-trust-symbol.png"} alt="" />ّ
 										</div>
 										<div className="bg-light rounded mr-5">
-										<img src={publicUrl + "assets/img/National-mark-of-registration.png"} alt="" />ّ
+											<img src={publicUrl + "assets/img/National-mark-of-registration.png"} alt="" />ّ
 										</div>
 									</div>
 									<ul className="social-icon">
 										<li>
-											<a  href="/" target="_blank"><i className="fa fa-instagram  " /></a>
+											<a href="/" target="_blank"><i className="fa fa-instagram  " /></a>
 										</li>
 										<li>
-											<a  href="/" target="_blank"><i className="fa fa-whatsapp  " /></a>
+											<a href="/" target="_blank"><i className="fa fa-whatsapp  " /></a>
 										</li>
-										
+
 									</ul>
 								</div>
 							</div>
@@ -53,7 +53,7 @@ class Footer_v1 extends Component {
 							<div className="footer-widget widget ">
 								<div className="widget-contact">
 									<h4 className="widget-title">دسترسی سریع</h4>
-									
+
 									<ul className='widget_nav_menu  viaje-go-top'>
 										<li className='text-light my-4'>
 											<Link href='/'>
@@ -127,9 +127,9 @@ class Footer_v1 extends Component {
 						</div> */}
 					</div>
 				</div>
-				<div className="copyright-inner" style={{direction:'ltr'}}>
+				<div className="copyright-inner" style={{ direction: 'ltr' }}>
 					<div className="copyright-text">
-					© Baazi Chi 2022 All rights reserved. Powered with <a href="https://codingeek.net/" target="_blank"><i className="fa fa-heart" /><span>by Nilva</span></a>
+						© Baazi Chi 2022 All rights reserved. Powered with <a href="https://codingeek.net/" target="_blank"><i className="fa fa-heart" /><span>by Nilva</span></a>
 					</div>
 				</div>
 			</footer>
