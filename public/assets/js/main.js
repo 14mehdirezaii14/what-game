@@ -177,18 +177,46 @@
             nextArrow: '<span class="slick-next"><i class="la la-long-arrow-right"></i></span>',
             appendArrows: $('.destinations-slider-controls .slider-nav'),
             responsive: [{
+                    breakpoint: 1610,
+                    settings: {
+                        centerPadding: '100px',
+                    }
+                },
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerPadding: '80px',
+                    }
+                },
+                {
                     breakpoint: 992,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        centerPadding: '80px',
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: '140px',
                     }
                 },
                 {
                     breakpoint: 576,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        centerPadding: "10px"
+                        slidesToShow: 1,
+                        centerPadding: '55px',
+                    }
+                },
+                {
+                    breakpoint: 321,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: '30px',
                     }
                 }
             ]
