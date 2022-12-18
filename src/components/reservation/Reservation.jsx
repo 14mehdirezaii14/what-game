@@ -22,7 +22,7 @@ const Reservation = () => {
             <Broadcast linkList={[{ src: '/', pageName: 'صفحه اصلی' }, { src: '/the-game', pageName: 'اتاق فرار ایستگاه' }, { src: '/', pageName: 'رزرو اتاق فرار ایستگاه' }]} />
             <div className="container my-5 ">
                 <div className="row">
-                    <div className="col-md-9 text-right">
+                    <div className="col-lg-9 text-right">
                         {/* counter steper */}
                         <div className="d-flex justify-content-around stepUi mb-5">
                             <div className={`step1 ${state.reservation.step !== 1 ? 'stepYellow step1AfterYellow' : null} d-inline-block text-center`}>
@@ -61,7 +61,7 @@ const Reservation = () => {
                         }
 
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-lg-3">
                         <Gameinformationbox />
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 530px) {
     .step1::after {
         content: '';
         display: none;
@@ -10,6 +10,89 @@
     .step3::after {
         content: '';
         display: none;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .step1::after {
+        content: '';
+        position: absolute;
+        width: 173px !important;
+        height: 1px;
+        right: 148px !important;
+        background-color: #707A8C;
+        top: 15px;
+    }
+    .step2::after {
+        width: 165px !important;
+    }
+    .step3::after {
+        width: 160px !important;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .step1::after {
+        width: 228px !important;
+        right: 176px !important;
+    }
+    .step2::after {
+        width: 220px !important;
+    }
+    .step3::after {
+        width: 215px !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .step1::after {
+        width: 191px !important;
+        right: 158px !important;
+    }
+    .step2::after {
+        width: 185px !important;
+    }
+    .step3::after {
+        width: 175px !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .step1::after {
+        width: 175px !important;
+        right: 149px !important;
+    }
+    .step2::after {
+        width: 165px !important;
+    }
+    .step3::after {
+        width: 160px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .step1::after {
+        width: 140px !important;
+        right: 132px !important;
+    }
+    .step2::after {
+        width: 130px !important;
+    }
+    .step3::after {
+        width: 125px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .step1::after {
+        width: 93px !important;
+        right: 110px !important;
+    }
+    .step2::after {
+        width: 85px !important;
+    }
+    .step3::after {
+        width: 78px !important;
     }
 }
 
