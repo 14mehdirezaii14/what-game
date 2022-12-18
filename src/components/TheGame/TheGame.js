@@ -41,7 +41,20 @@ const TheGame = () => {
                             <br />
                             *زودتر و یا دیرتر از زمان بازی در محل حاضر نشید.
                         </p>
-                        <a className="btn-read-more  ml-4" href="#/blog-details"><span>ادامه مطلب<i className="la la-arrow-left"></i></span></a>
+                        {/* <a className="btn-read-more  ml-4" href="#/blog-details"><span>ادامه مطلب<i className="la la-arrow-left"></i></span></a> */}
+                        {/*  */}
+                        <div class="collapse" id="readMoreTheGame">
+                            <div>
+                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                            </div>
+                        </div>
+
+                        <a className="btn-read-more  ml-4" data-toggle="collapse" href="#readMoreTheGame" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <span>ادامه مطلب<i className="la la-arrow-left"></i></span>
+                        </a>
+
+
+
                     </div>
                     {/* Station escape room locks */}
 
