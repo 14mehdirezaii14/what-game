@@ -306,7 +306,7 @@
             autoplay: true,
             autoplaySpeed: 7000,
             centerMode: true,
-            centerPadding: '140px',
+            centerPadding: '340px',
             loop: true,
             prevArrow: '<span class="slick-prev"><i class="la la-long-arrow-left"></i></span>',
             nextArrow: '<span class="slick-next"><i class="la la-long-arrow-right"></i></span>',

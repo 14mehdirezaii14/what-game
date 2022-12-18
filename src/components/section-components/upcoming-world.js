@@ -21,8 +21,8 @@ class UpcomingWorld extends Component {
 			<div style={{ direction: 'ltr' }} className="upcomming-card-slider upcomming-card-slider-1 tp-common-slider-style">
 				{/* single card */}
 				<div className="single-upconing-card">
-					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/1.png)' }}>
-						<img src={publicUrl + "assets/img/tour/1.png"} alt="flag" />
+					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
+						<img src={publicUrl + "assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png"} alt="flag" />
 					</div>
 					{/* content modal */}
 					<div className="content text-center w-100 bg-dark">
@@ -59,8 +59,8 @@ class UpcomingWorld extends Component {
 				</div>
 				{/* single card */}
 				<div className="single-upconing-card">
-					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/1.png)' }}>
-						<img src={publicUrl + "assets/img/tour/1.png"} alt="flag" />
+					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
+						<img src={publicUrl + "assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png"} alt="flag" />
 					</div>
 					{/* content modal */}
 					<div className="content text-center w-100 bg-dark">
@@ -97,8 +97,8 @@ class UpcomingWorld extends Component {
 				</div>
 				{/* single card */}
 				<div className="single-upconing-card">
-					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/1.png)' }}>
-						<img src={publicUrl + "assets/img/tour/1.png"} alt="flag" />
+					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
+						<img src={publicUrl + "assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png"} alt="flag" />
 					</div>
 					{/* content modal */}
 					<div className="content text-center w-100 bg-dark">
@@ -135,11 +135,11 @@ class UpcomingWorld extends Component {
 				</div>
 				{/* single card */}
 				<div className="single-upconing-card">
-					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/1.png)' }}>
-						<img src={publicUrl + "assets/img/tour/1.png"} alt="flag" />
+					<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
+						<img src={publicUrl + "assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png"} alt="flag" />
 					</div>
 					{/* content modal */}
-					<div className="content text-center w-100 ">
+					<div className="content text-center w-100 bg-dark">
 						<div className='w-100'>
 							{/* title */}
 							<h3 className="title text-center">
@@ -162,7 +162,7 @@ class UpcomingWorld extends Component {
 								<span className='float-right text-light'>90 دقیقه</span>
 							</div>
 							{/* lock icon */}
-							<i className='fa fa-lock text-warning float-left  pt-2 '></i>
+							<i className='fa fa-lock text-warning float-left  pt-2 pl-3'></i>
 							<i className='fa fa-lock text-warning float-left  pt-2 pl-3'></i>
 							<i className='fa fa-lock text-warning float-left  pt-2 pl-3'></i>
 							<i className='fa fa-lock text-warning float-left  pt-2 pl-3'></i>
@@ -171,6 +171,10 @@ class UpcomingWorld extends Component {
 						</div>
 					</div>
 				</div>
+				
+				
+				
+				
 
 			</div>
 		</div>
