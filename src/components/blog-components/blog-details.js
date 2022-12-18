@@ -2,7 +2,22 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Comments from './comments';
 import Sidebar from './sidebar';
-class BlogDetails extends Component {
+class 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BlogDetails extends Component {
 	render() {
 		let publicUrl = process.env.PUBLIC_URL + '/'
 		let imagealt = 'image'
@@ -14,7 +29,7 @@ class BlogDetails extends Component {
 						<div className="col-lg-8">
 							<div className="single-blog mb-0 text-right">
 								<div className="thumb">
-									<img src={publicUrl + "assets/img/blog-details/1.png"} alt="blog" />
+									<img src={publicUrl + "assets/img/blog-details/parsoa-khorsand-Dd6n63H9szw-unsplash 2.png"} alt="blog" />
 								</div>
 								<div className="single-blog-details">
 									<p className="date mb-0">۳۱ شهریور ۱۴۰۱</p>

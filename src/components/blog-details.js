@@ -9,7 +9,7 @@ import Broadcast from './broadcast/Broadcast';
 const BlogDetailsPage = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle=""  />
+        <PageHeader headertitle="وبلاگ بازی چی"  />
         <Broadcast linkList={[{src:'/',pageName:'صفحه اصلی'},{src:'/blog-details',pageName:'وبلاگ بازی چی'}]}/>
         <BlogDetails />
         {/* <Subscribe /> */}

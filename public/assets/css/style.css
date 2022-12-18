@@ -1655,13 +1655,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     bottom: 0;
     width: 100%;
     height: 40%;
-    background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgba(18, 18, 18, 0.87) 49%, #121212 122.45%);
-    -webkit-transition: all 0.6s ease;
-    -moz-transition: all 0.6s ease;
-    -o-transition: all 0.6s ease;
-    transition: all 0.6s ease;
+    background: -webkit-linear-gradient(white, #121212);
+    background: -o-linear-gradient(white, #121212);
+    background: linear-gradient(rgba(255, 255, 255, 0), #121212);
     z-index: 0;
-    opacity: 1;
 }
 
 .breadcrumb-area .breadcrumb-inner {

@@ -18,7 +18,7 @@ const Reservation = () => {
     return (
         <>
             <Navbar />
-            <PageHeader img={`assets/img/reservation/julius-drost-Ariu17epnPk-unsplash.png`} />
+            <PageHeader headertitle={'رزرو اتاق فرار ایستگاه'} img={`assets/img/reservation/julius-drost-Ariu17epnPk-unsplash.png`} />
             <Broadcast linkList={[{ src: '/', pageName: 'صفحه اصلی' }, { src: '/the-game', pageName: 'اتاق فرار ایستگاه' }, { src: '/', pageName: 'رزرو اتاق فرار ایستگاه' }]} />
             <div className="container my-5 ">
                 <div className="row">
