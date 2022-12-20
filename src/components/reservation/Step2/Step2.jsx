@@ -8,8 +8,8 @@ import { useSelector, useDispatch } from 'react-redux'
 const Step2 = () => {
     const [stateBtn, setStateBtn] = useState(true)
     const [date, setDate] = useState(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD'))
-    const [time, setTime] = useState('انتخاب سانس')
-    const [numberOfPeople, setNumberOfPeople] = useState('انتخاب نفرات')
+    const [timee, setTimee] = useState('انتخاب سانس')
+    const [numberOfPersons, setNumberOfPersons] = useState('انتخاب نفرات')
     const datePickerRef = useRef(null)
     const state = useSelector((state) => state)
 
@@ -17,13 +17,14 @@ const Step2 = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (time !== 'انتخاب سانس' && numberOfPeople !== 'انتخاب نفرات') {
+        console.log(numberOfPersons)
+        if (timee !== 'انتخاب سانس' && numberOfPersons !== 'انتخاب نفرات') {
             setStateBtn(false)
         }
-    }, [numberOfPeople, time])
+    }, [numberOfPersons, timee])
 
     const next = () => {
-        dispatch({ type: 'setDate', peyload: { date, numberOfPeople, time } })
+        dispatch({ type: 'setDate', peyload: { date, numberOfPersons, timee } })
         dispatch({ type: 'step2' })
     }
     return (
@@ -89,12 +90,12 @@ const Step2 = () => {
             <p className="mt-4 text-light">انتخاب سانس</p>
             <div className="dropdown ">
                 <a href="#" className="ChooseAnHour py-2 px-3 text-right btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {time}
+                    {timee}
 
                 </a>
                 <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
                     {/*  */}
-                    <a type="button" onClick={() => setTime('ساعت 18')} className=" py-2 px-3 text-right btn-block" >
+                    <a type="button" onClick={() => setTimee('ساعت 18')} className=" py-2 px-3 text-right btn-block" >
                         ساعت 18
                     </a>
                     {/*  */}
@@ -104,11 +105,11 @@ const Step2 = () => {
             <p className="mt-4 text-light">تعداد افراد</p>
             <div className="dropdown ">
                 <a href="#" className="ChooseAnHour py-2 px-3 text-right btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {numberOfPeople}
+                    {numberOfPersons}
                 </a>
                 <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
                     {/*  */}
-                    <a type="button" onClick={() => setNumberOfPeople('5 نفر ')} className=" py-2 px-3 text-right btn-block" >
+                    <a type="button" onClick={() => setNumberOfPersons('5 نفر ')} className=" py-2 px-3 text-right btn-block" >
                         5نفر
                     </a>
                     {/*  */}

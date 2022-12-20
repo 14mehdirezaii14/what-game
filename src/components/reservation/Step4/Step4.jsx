@@ -1,9 +1,15 @@
-import React from "react"
+import React,{useEffect} from "react"
 import { useSelector, useDispatch } from 'react-redux'
-
+import reservationApi from "../../../api/reservationApi"
 const Step4 = () => {
+    const state = useSelector((state) => state)
     const dispatch = useDispatch()
     let publicUrl = process.env.PUBLIC_URL + '/'
+
+    const payment = () => {
+        console.log(state)
+        reservationApi(state.reservationInformation)
+    }
     return (
         <>
             <h3 className="my-5 py-5">
@@ -41,7 +47,7 @@ const Step4 = () => {
             </table>
             <div className="d-flex justify-content-between mt-5" >
                 <button className="btn btn-gray" onClick={() => dispatch({ type: 'step2' })} >قبلی</button>
-                <button className="btn btn-game-reservation"  >پرداخت</button>
+                <button className="btn btn-game-reservation"  onClick={payment}>پرداخت</button>
             </div>
         </>
     )

@@ -1,7 +1,7 @@
 let form = {
     date: '',
-    time: '',
-    numberOfPeople: '',
+    timee: '',
+    numberOfPersons: '',
     name: '',
     lastName: '',
     email: '',
@@ -12,8 +12,8 @@ function reservationInformation(state = form, action) {
     switch (action.type) {
         case 'setDate':
             form.date = action.peyload.date
-            form.time = action.peyload.time
-            form.numberOfPeople = action.peyload.numberOfPeople
+            form.timee = action.peyload.timee
+            form.numberOfPersons = action.peyload.numberOfPersons
             return form
         case 'UserProfile':
             form.name = action.peyload.name
