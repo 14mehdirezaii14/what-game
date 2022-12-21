@@ -19,14 +19,15 @@ class Footer_v1 extends Component {
 
 		return (
 			<footer className="footer-area" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/bg/Footer.png)' }}>
-				<div className="container z1" style={{zIndex:1}}>
+				<div className="container z1" style={{ zIndex: 1 }}>
 					<div className="row text-right">
 						<div className="col-lg-4 col-md-6">
 							<div className="footer-widget widget">
 								<div className="about_us_widget">
-									<Link to="/" className="footer-logo d-flex">
-										<p>بازی چی</p>
-										<img src={publicUrl + "assets/img/favicon.png"} width={50} height={50} alt="footer logo" />
+									<Link to="/" className="footer-logo d-flex align-items-center">
+
+										<img src={publicUrl + "assets/img/MyLogo.png"} width={50} height={50} alt="footer logo" />
+										<span className='text-light'>بازی چی</span>
 									</Link>
 									<p>We believe brand interaction is key in commu- nication. Real innovations and a positive customer experience are the heart of successful communication.</p>
 									<div className="d-flex mb-5">
