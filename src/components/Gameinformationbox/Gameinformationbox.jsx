@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Gameinformationbox = () => {
+import { useSelector, useDispatch } from 'react-redux'
+// {
+//     genre,
+//     name,
+//     timee,
+//     capacity,
+//     degreeOfDifficult,
+//     age,
+//     price,
+//     scenario,
+//     gameTips,
+//     viewMoreGameTips,
+//     img
+// }
+const Gameinformationbox = (props) => {
+    const dispatch = useDispatch()
+    const state = useSelector(state => state)
     let publicUrl = process.env.PUBLIC_URL + '/'
+    useEffect(() => {
+        console.log(state)
+    }, [])
     return (
         <div className="Game-information-box py-5">
             {/* title */}
             <div className="d-flex title align-items-center px-4">
                 <img src={publicUrl + "assets/img/the-game/anton-stasiuk-RqQ081i8HFA-unsplash 2.png"} alt="" />
-                <h4 className="text-dark mr-5">اتاق فرار ایستگاه</h4>
+                <h4 className="text-dark mr-5">{props.game.name}</h4>
             </div>
             {/* genre */}
             <div className="my-3  border-bottom d-flex justify-content-between px-4">
@@ -16,7 +35,7 @@ const Gameinformationbox = () => {
                     ژانر
                 </p>
                 <p className="text-left text-dark">
-                    ترسناک - جنایی
+                    {props.game.genre}
                 </p>
             </div>
             {/* time */}
@@ -27,7 +46,7 @@ const Gameinformationbox = () => {
 
                 </p>
                 <p className="text-left text-dark">
-                    ۹۰ دقیقه
+                    {props.game.timee}
                 </p>
             </div>
             {/* Capacity */}
@@ -38,7 +57,7 @@ const Gameinformationbox = () => {
 
                 </p>
                 <p className="text-left text-dark">
-                    ۴ تا ۷ نفر
+                    {props.game.capacity}
                 </p>
             </div>
             {/* degree of difficulty */}
@@ -49,7 +68,7 @@ const Gameinformationbox = () => {
 
                 </p>
                 <p className="text-left text-dark">
-                    ۸ از ۱۰
+                    {props.game.degreeOfDifficulty}
                 </p>
             </div>
             {/* age */}
@@ -60,7 +79,7 @@ const Gameinformationbox = () => {
 
                 </p>
                 <p className="text-left text-dark">
-                    +۱۸
+                    {props.game.age}
                 </p>
             </div>
             {/* Price (per person) */}
@@ -71,13 +90,12 @@ const Gameinformationbox = () => {
 
                 </p>
                 <p className="text-left text-dark">
+                    {state.reservationInformation.price ? state.reservationInformation.price : props.game.price}
 
-                    ۱۳۰،۰۰۰
-                    تومان
                 </p>
             </div>
             <div className="px-4">
-                <Link to="/reservation" className="btn btn-block btn-game-reservation">رزرو بازی</Link>
+                <Link to={`/reservation/${props.game.name}`} className="btn btn-block btn-game-reservation">رزرو بازی</Link>
             </div>
         </div>
     )

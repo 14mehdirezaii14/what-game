@@ -18,7 +18,7 @@ const Step3 = () => {
     }, [name, lastName, email, phone])
     const next = () => {
         console.log(name)
-        dispatch({ type: 'UserProfile', peyload: { name: name, lastName, email, phone } })
+        dispatch({ type: 'UserProfile', peyload: { name, lastName, email, phone } })
         dispatch({ type: 'step3' })
     }
     return (

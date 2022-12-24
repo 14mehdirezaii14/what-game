@@ -55,8 +55,8 @@ class Root extends Component {
 						<Route path="/blog-v2" component={BlogV2} />
 						<Route path="/blog-v3" component={BlogV3} />
 						<Route path="/blog-details" component={BlogDetails} />
-						<Route path="/the-game" component={TheGame} />
-						<Route path="/reservation" component={Reservation} />
+						<Route path="/the-game/:gameName" component={TheGame} />
+						<Route path="/reservation/:name" component={Reservation} />
 					</Switch>
 				</Provider>
 			</HashRouter>

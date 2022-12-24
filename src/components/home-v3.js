@@ -16,6 +16,7 @@ import Footer from './global-components/footer';
 import Offer from './section-components/offer';
 
 const Home_V3 = () => {
+
     return <div>
         <Navbar />
         <Banner />

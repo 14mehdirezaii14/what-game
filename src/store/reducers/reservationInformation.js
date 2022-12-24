@@ -1,4 +1,6 @@
 let form = {
+    nameGame: '',
+    price: '',
     date: '',
     timee: '',
     numberOfPersons: '',
@@ -10,6 +12,9 @@ let form = {
 
 function reservationInformation(state = form, action) {
     switch (action.type) {
+        case 'setPrice':
+            form.price = action.peyload.price
+            return form
         case 'setDate':
             form.date = action.peyload.date
             form.timee = action.peyload.timee
@@ -21,6 +26,10 @@ function reservationInformation(state = form, action) {
             form.email = action.peyload.email
             form.phone = action.peyload.phone
             return form
+        case 'nameGame':
+            form.nameGame = action.peyload.nameGame
+            return form
+
         default:
             return state
     }

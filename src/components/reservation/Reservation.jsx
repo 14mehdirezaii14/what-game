@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../global-components/navbar";
 import PageHeader from '../global-components/page-header';
 import Gameinformationbox from "../Gameinformationbox/Gameinformationbox";
@@ -9,12 +9,32 @@ import Step3 from "./step3/step3";
 import Step4 from "./Step4/Step4";
 import { useSelector, useDispatch } from 'react-redux'
 import Broadcast from "../broadcast/Broadcast";
+import axios from "axios";
 const Reservation = () => {
     const state = useSelector(state => state)
     const dispatch = useDispatch()
+    const [game, setGame] = useState()
     useEffect(() => {
-        console.log(state)
+
+        const nameProduct = window.location.hash.split('/')[2]
+        axios.get('/product.json').then((res) => {
+            setGame(res.data.filter((item) => {
+                return item.name === nameProduct
+            })[0])
+        })
+    }, [])
+    useEffect(() => {
+        console.log('change')
     }, [state])
+    useEffect(() => {
+
+        if (game) {
+            let nameGame = game
+            console.log(game)
+            dispatch({ type: 'nameGame', peyload: { nameGame: nameGame.name } })
+            dispatch({ type: 'setPrice', peyload: { price: nameGame.price } })
+        }
+    }, [game])
     return (
         <>
             <Navbar />
@@ -62,7 +82,7 @@ const Reservation = () => {
 
                     </div>
                     <div className="col-lg-3">
-                        <Gameinformationbox />
+                        {game ? <Gameinformationbox game={game} /> : ''}
                     </div>
                 </div>
             </div>

@@ -5,6 +5,41 @@ import momentJalaali from 'moment-jalaali';
 
 import { useSelector, useDispatch } from 'react-redux'
 
+
+
+const listTime = [
+    {
+        time: 'ساعت 11',
+        price: '105,000 هزار تومان'
+    },
+    {
+        time: 'ساعت 13',
+        price: '105,000 هزار تومان'
+    },
+    {
+        time: 'ساعت 15',
+        price: '130,000 هزار تومان'
+    },
+    {
+        time: 'ساعت 17',
+        price: '130,000 هزار تومان'
+    },
+    {
+        time: 'ساعت 19',
+        price: '130,000 هزار تومان'
+    },
+    {
+        time: 'ساعت 21',
+        price: '150,000 هزار تومان'
+    },
+    {
+        time: 'ساعت 23',
+        price: '150,000 هزار تومان'
+    },
+
+
+]
+
 const Step2 = () => {
     const [stateBtn, setStateBtn] = useState(true)
     const [date, setDate] = useState(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD'))
@@ -17,7 +52,6 @@ const Step2 = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        console.log(numberOfPersons)
         if (timee !== 'انتخاب سانس' && numberOfPersons !== 'انتخاب نفرات') {
             setStateBtn(false)
         }
@@ -26,6 +60,13 @@ const Step2 = () => {
     const next = () => {
         dispatch({ type: 'setDate', peyload: { date, numberOfPersons, timee } })
         dispatch({ type: 'step2' })
+    }
+
+    const clickSans = (item) => {
+        const price = item.price
+        dispatch({ type: 'setPrice', peyload: { price:price } })
+        setTimee(item.time)
+
     }
     return (
         <div className="py-5 my-5">
@@ -94,11 +135,17 @@ const Step2 = () => {
 
                 </a>
                 <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
-                    {/*  */}
-                    <a type="button" onClick={() => setTimee('ساعت 18')} className=" py-2 px-3 text-right btn-block" >
-                        ساعت 18
-                    </a>
-                    {/*  */}
+
+                    {listTime.map((item, index) => {
+                        return (
+                            <a key={index} type="button" onClick={() => clickSans(item)} className=" py-2 px-3 text-right btn-block" >
+                                <span className="float-right">{item.time} </span>
+                                <span className="mr-3 text-danger small">{item.price}</span>
+                            </a>
+                        )
+                    })}
+
+
                 </div>
             </div>
             {/* number of people */}
