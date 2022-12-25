@@ -8421,3 +8421,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ul {
     list-style: none;
 }
+
+.slick-slider {
+    height: 500px;
+}
+
+
+/* 
+.slick-track {
+    width: 100% !important;
+    text-align: center !important;
+} */

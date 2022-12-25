@@ -1,4 +1,4 @@
-import axios from 'axios'
+import Axios from './axios';
 
 
 const reservationApi = ({ nameGame, price, date, timee, numberOfPersons, name, lastName, email, phone }) => {
@@ -14,7 +14,7 @@ const reservationApi = ({ nameGame, price, date, timee, numberOfPersons, name, l
     formData.append('phone', phone)
 
 
-    axios.post("http://127.0.0.1:8000/ticket/", formData).then((res) => {
+    Axios.post("http://127.0.0.1:8000/ticket/", formData).then((res) => {
         console.log(JSON.stringify(res.data))
     })
 

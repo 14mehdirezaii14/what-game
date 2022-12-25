@@ -3,17 +3,19 @@ import { useEffect, useState } from "react";
 import Navbar from "../global-components/navbar";
 import './TheGame.css'
 import Gameinformationbox from "../Gameinformationbox/Gameinformationbox"
-import axios from "axios";
+
+import Axios from "../../api/axios";
 const TheGame = () => {
     const [game, setGame] = useState()
 
     useEffect(() => {
         // console.log("<><><><><><><><><><>", window.location.hash.split('/')[2])
-        const nameProduct = window.location.hash.split('/')[2]
-        axios.get('/product.json').then((res) => {
-            setGame(res.data.filter((item) => {
-                return item.name === nameProduct
-            })[0])
+        const idProduct = window.location.hash.split('/')[2]
+        Axios.get('http://127.0.0.1:8000/EscapeRoomGet/').then((res) => {
+            setGame(...res.data.filter((item) => {
+                console.log(item.id == idProduct)
+                return item.id == idProduct
+            }))
         })
     }, [])
     return <div>

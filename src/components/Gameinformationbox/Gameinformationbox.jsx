@@ -2,26 +2,12 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from 'react-redux'
-// {
-//     genre,
-//     name,
-//     timee,
-//     capacity,
-//     degreeOfDifficult,
-//     age,
-//     price,
-//     scenario,
-//     gameTips,
-//     viewMoreGameTips,
-//     img
-// }
+
 const Gameinformationbox = (props) => {
     const dispatch = useDispatch()
     const state = useSelector(state => state)
     let publicUrl = process.env.PUBLIC_URL + '/'
-    useEffect(() => {
-        console.log(state)
-    }, [])
+
     return (
         <div className="Game-information-box py-5">
             {/* title */}
@@ -95,7 +81,7 @@ const Gameinformationbox = (props) => {
                 </p>
             </div>
             <div className="px-4">
-                <Link to={`/reservation/${props.game.name}`} className="btn btn-block btn-game-reservation">رزرو بازی</Link>
+                <Link to={`/reservation/${props.game.id}`} className="btn btn-block btn-game-reservation">رزرو بازی</Link>
             </div>
         </div>
     )

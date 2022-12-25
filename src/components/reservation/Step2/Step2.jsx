@@ -4,7 +4,23 @@ import { Calendar } from 'react-datepicker2';
 import momentJalaali from 'moment-jalaali';
 
 import { useSelector, useDispatch } from 'react-redux'
+import Axios from "../../../api/axios";
 
+
+const disableDate = [
+    {
+        disabled: true,
+        start: momentJalaali().add(-1000, 'days'),
+        end: momentJalaali().add(-1, 'days')
+    },
+    {
+        disabled: true,
+        start: '2022/12/25',
+        end: '2022/12/25'
+    },
+
+
+]
 
 
 const listTime = [
@@ -45,12 +61,26 @@ const Step2 = () => {
     const [date, setDate] = useState(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD'))
     const [timee, setTimee] = useState('انتخاب سانس')
     const [numberOfPersons, setNumberOfPersons] = useState('انتخاب نفرات')
+    const [disableDate, setDisableDate] = useState([])
     const datePickerRef = useRef(null)
     const state = useSelector((state) => state)
 
     const [ChoiceDay, setChoiceDay] = useState(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD')).replace('0:00:00', ''))
     const dispatch = useDispatch()
-
+    useEffect(() => {
+        Axios.get('getDisableDate/').then((res) => {
+            console.log(res)
+            setDisableDate()
+            res.data.map((i) => {
+                setDisableDate([{
+                    disabled: true,
+                    start: i.date,
+                    end: i.date
+                },]
+                )
+            })
+        })
+    }, [])
     useEffect(() => {
         if (timee !== 'انتخاب سانس' && numberOfPersons !== 'انتخاب نفرات') {
             setStateBtn(false)
@@ -64,9 +94,18 @@ const Step2 = () => {
 
     const clickSans = (item) => {
         const price = item.price
-        dispatch({ type: 'setPrice', peyload: { price:price } })
+        dispatch({ type: 'setPrice', peyload: { price: price } })
         setTimee(item.time)
 
+    }
+    const changeDate = (value) => {
+        console.log(value.format("YYYY/M/D"))
+        console.log(moment(value).jDate())
+        setDate(value.format("YYYY/M/D"))
+        setChoiceDay(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', ''))
+        Axios.get('ticket/').then((res) => {
+            console.log(res)
+        })
     }
     return (
         <div className="py-5 my-5">
@@ -80,29 +119,13 @@ const Step2 = () => {
             <div className="CalendarParent">
                 <Calendar
                     value={date}
-                    ranges={[
-                        {
-                            disabled: true,
-                            start: momentJalaali().add(-1000, 'days'),
-                            end: momentJalaali().add(-1, 'days')
-                        },
-                        {
-                            disabled: true,
-                            start: '2022/12/17',
-                            end: '2022/12/16'
-                        },
 
-
-
-                    ]}
+                    ranges={disableDate}
                     inputFormat="YYYY/MM/DDD"
                     isGregorian={false}
                     // ref={datePickerRef}
                     onChange={value => {
-                        console.log(value.format("YYYY/M/D"))
-                        console.log(moment(value).jDate())
-                        setDate(value.format("YYYY/M/D"))
-                        setChoiceDay(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', ''))
+                        changeDate(value)
 
                     }}
                     timePicker={false}

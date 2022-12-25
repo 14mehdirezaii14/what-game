@@ -9,18 +9,20 @@ import Step3 from "./step3/step3";
 import Step4 from "./Step4/Step4";
 import { useSelector, useDispatch } from 'react-redux'
 import Broadcast from "../broadcast/Broadcast";
-import axios from "axios";
+
+import Axios from "../../api/axios";
 const Reservation = () => {
     const state = useSelector(state => state)
     const dispatch = useDispatch()
     const [game, setGame] = useState()
     useEffect(() => {
 
-        const nameProduct = window.location.hash.split('/')[2]
-        axios.get('/product.json').then((res) => {
-            setGame(res.data.filter((item) => {
-                return item.name === nameProduct
-            })[0])
+        const idProduct = window.location.hash.split('/')[2]
+        Axios.get('http://127.0.0.1:8000/EscapeRoomGet/').then((res) => {
+            setGame(...res.data.filter((item) => {
+                console.log(item.id == idProduct)
+                return item.id == idProduct
+            }))
         })
     }, [])
     useEffect(() => {
