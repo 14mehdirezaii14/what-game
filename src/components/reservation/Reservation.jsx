@@ -16,7 +16,6 @@ const Reservation = () => {
     const dispatch = useDispatch()
     const [game, setGame] = useState()
     useEffect(() => {
-
         const idProduct = window.location.hash.split('/')[2]
         Axios.get('http://127.0.0.1:8000/EscapeRoomGet/').then((res) => {
             setGame(...res.data.filter((item) => {
@@ -31,10 +30,10 @@ const Reservation = () => {
     useEffect(() => {
 
         if (game) {
-            let nameGame = game
             console.log(game)
-            dispatch({ type: 'nameGame', peyload: { nameGame: nameGame.name } })
-            dispatch({ type: 'setPrice', peyload: { price: nameGame.price } })
+            dispatch({ type: 'nameGame', peyload: { nameGame: game.name } })
+            dispatch({ type: 'setPrice', peyload: { price: game.price } })
+            dispatch({ type: 'idGame', peyload: { idGame: game.id } })
         }
     }, [game])
     return (

@@ -1,4 +1,5 @@
 let form = {
+    idGame: '',
     nameGame: '',
     price: '',
     date: '',
@@ -28,6 +29,9 @@ function reservationInformation(state = form, action) {
             return form
         case 'nameGame':
             form.nameGame = action.peyload.nameGame
+            return form
+        case 'idGame':
+            form.idGame = action.peyload.idGame
             return form
 
         default:

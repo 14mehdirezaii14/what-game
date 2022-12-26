@@ -1,8 +1,9 @@
 import Axios from './axios';
 
 
-const reservationApi = ({ nameGame, price, date, timee, numberOfPersons, name, lastName, email, phone }) => {
+const reservationApi = ({ idGame, nameGame, price, date, timee, numberOfPersons, name, lastName, email, phone }) => {
     const formData = new FormData();
+    formData.append('idGame', idGame)
     formData.append('date', date)
     formData.append('nameGame', nameGame)
     formData.append('price', price)

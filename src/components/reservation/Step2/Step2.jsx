@@ -7,78 +7,122 @@ import { useSelector, useDispatch } from 'react-redux'
 import Axios from "../../../api/axios";
 
 
-const disableDate = [
-    {
-        disabled: true,
-        start: momentJalaali().add(-1000, 'days'),
-        end: momentJalaali().add(-1, 'days')
-    },
-    {
-        disabled: true,
-        start: '2022/12/25',
-        end: '2022/12/25'
-    },
+// const disableDate = [
+//     {
+//         disabled: true,
+//         start: momentJalaali().add(-1000, 'days'),
+//         end: momentJalaali().add(-1, 'days')
+//     },
+//     {
+//         disabled: true,
+//         start: '2022/12/25',
+//         end: '2022/12/25'
+//     },
+// ]
 
 
-]
-
-
-const listTime = [
-    {
-        time: 'ساعت 11',
-        price: '105,000 هزار تومان'
-    },
-    {
-        time: 'ساعت 13',
-        price: '105,000 هزار تومان'
-    },
-    {
-        time: 'ساعت 15',
-        price: '130,000 هزار تومان'
-    },
-    {
-        time: 'ساعت 17',
-        price: '130,000 هزار تومان'
-    },
-    {
-        time: 'ساعت 19',
-        price: '130,000 هزار تومان'
-    },
-    {
-        time: 'ساعت 21',
-        price: '150,000 هزار تومان'
-    },
-    {
-        time: 'ساعت 23',
-        price: '150,000 هزار تومان'
-    },
-
-
-]
+// const listTime = [
+//     {
+//         time: 'ساعت 11',
+//         price: '105,000 هزار تومان',
+//         disable: true
+//     },
+//     {
+//         time: 'ساعت 13',
+//         price: '105,000 هزار تومان',
+//         disable: false
+//     },
+//     {
+//         time: 'ساعت 15',
+//         price: '130,000 هزار تومان',
+//         disable: false
+//     },
+//     {
+//         time: 'ساعت 17',
+//         price: '130,000 هزار تومان',
+//         disable: false
+//     },
+//     {
+//         time: 'ساعت 19',
+//         price: '130,000 هزار تومان',
+//         disable: false
+//     },
+//     {
+//         time: 'ساعت 21',
+//         price: '150,000 هزار تومان',
+//         disable: false
+//     },
+//     {
+//         time: 'ساعت 23',
+//         price: '150,000 هزار تومان',
+//         disable: false
+//     },
+// ]
 
 const Step2 = () => {
     const [stateBtn, setStateBtn] = useState(true)
-    const [date, setDate] = useState(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD'))
+    const [date, setDate] = useState(momentJalaali(moment().format("YYYY/M/D"), 'YYYY/M/D'))
     const [timee, setTimee] = useState('انتخاب سانس')
     const [numberOfPersons, setNumberOfPersons] = useState('انتخاب نفرات')
-    const [disableDate, setDisableDate] = useState([])
-    const datePickerRef = useRef(null)
+    const [disableDate, setDisableDate] = useState([{
+        disabled: true,
+        start: momentJalaali().add(-1000, 'days'),
+        end: momentJalaali().add(-1, 'days')
+    },])
+    const [listTime, setListTime] = useState([
+        {
+            time: 'ساعت 11',
+            price: '105,000 هزار تومان',
+            disable: false
+        },
+        {
+            time: 'ساعت 13',
+            price: '105,000 هزار تومان',
+            disable: false
+        },
+        {
+            time: 'ساعت 15',
+            price: '130,000 هزار تومان',
+            disable: false
+        },
+        {
+            time: 'ساعت 17',
+            price: '130,000 هزار تومان',
+            disable: false
+        },
+        {
+            time: 'ساعت 19',
+            price: '130,000 هزار تومان',
+            disable: false
+        },
+        {
+            time: 'ساعت 21',
+            price: '150,000 هزار تومان',
+            disable: false
+        },
+        {
+            time: 'ساعت 23',
+            price: '150,000 هزار تومان',
+            disable: false
+        },
+    ])
     const state = useSelector((state) => state)
-
     const [ChoiceDay, setChoiceDay] = useState(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD')).replace('0:00:00', ''))
     const dispatch = useDispatch()
     useEffect(() => {
-        Axios.get('getDisableDate/').then((res) => {
-            console.log(res)
-            setDisableDate()
-            res.data.map((i) => {
-                setDisableDate([{
-                    disabled: true,
-                    start: i.date,
-                    end: i.date
-                },]
-                )
-            })
+        Axios.get(`getDisableDate/?idGame=${state.reservationInformation.idGame}`).then((res) => {
+            if (res.data.length > 0) {
+                console.log(res)
+                setDisableDate()
+                res.data.map((i) => {
+                    setDisableDate([...disableDate, {
+                        disabled: true,
+                        start: i.date,
+                        end: i.date
+                    },]
+                    )
+                })
+            }
         })
     }, [])
     useEffect(() => {
@@ -88,7 +132,8 @@ const Step2 = () => {
     }, [numberOfPersons, timee])
 
     const next = () => {
-        dispatch({ type: 'setDate', peyload: { date, numberOfPersons, timee } })
+        console.log(moment(date).format('YYYY/M/D'))
+        dispatch({ type: 'setDate', peyload: { date: moment(date).format('YYYY/M/D'), numberOfPersons, timee } })
         dispatch({ type: 'step2' })
     }
 
@@ -96,15 +141,48 @@ const Step2 = () => {
         const price = item.price
         dispatch({ type: 'setPrice', peyload: { price: price } })
         setTimee(item.time)
-
     }
     const changeDate = (value) => {
-        console.log(value.format("YYYY/M/D"))
-        console.log(moment(value).jDate())
+        const dateStr = new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', '')
         setDate(value.format("YYYY/M/D"))
-        setChoiceDay(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', ''))
-        Axios.get('ticket/').then((res) => {
-            console.log(res)
+        setChoiceDay(dateStr)
+        Axios.get(`ticket/?date=${value.format("YYYY/M/D")}&idGame=${state.reservationInformation.idGame}`).then((res) => {
+            let newList = [];
+            if (res.data.length > 0) {
+                res.data.map((item) => {
+                    newList.push(listTime.filter((time) => {
+                        if (item.timee === time.time) {
+                            time.disable = true
+                        }
+                        return item
+
+                    }))
+                })
+                // res.data.map((item) => {
+                //     listTime.map((listItem) => {
+                //         console.log("listItem", listItem)
+                //         console.log("item", item)
+                //         if (item.timee === listItem.time) {
+                //             listItem.disable = true
+                //             newList.push({
+                //                 time: listItem.time,
+                //                 price: listItem.price,
+                //                 disable: true
+                //             },)
+                //         } else {
+                //             newList.push({
+                //                 time: listItem.time,
+                //                 price: listItem.price,
+                //                 disable: false
+                //             },)
+                //         }
+                //     })
+                // })
+                console.log(newList)
+                setListTime(newList[0])
+            }
+
+
         })
     }
     return (
@@ -147,6 +225,7 @@ const Step2 = () => {
                 </div>
             </div>
             {/*  */}
+
             <div>
                 <p className="text-light my-4">روز انتخابی شما:  {ChoiceDay}</p>
             </div>
@@ -160,8 +239,13 @@ const Step2 = () => {
                 <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
 
                     {listTime.map((item, index) => {
+                        if (item.disable) {
+                            return (
+                                <></>
+                            )
+                        }
                         return (
-                            <a key={index} type="button" onClick={() => clickSans(item)} className=" py-2 px-3 text-right btn-block" >
+                            <a key={index} type="button" aria-disabled={true} onClick={() => clickSans(item)} className=" py-2 px-3 text-right btn-block" >
                                 <span className="float-right">{item.time} </span>
                                 <span className="mr-3 text-danger small">{item.price}</span>
                             </a>
