@@ -1,11 +1,20 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import reservation from "./reducers/reservation";
 import reservationInformation from "./reducers/reservationInformation";
+import escapeRoomsReducer from "./reducers/escapeRoomsReducer";
+import disableDate from "./reducers/disableDate";
+import getTicketsReducer from "./reducers/getTicketsReducer";
+import createSagaMiddleware, { SagaMiddleware } from "redux-saga";
+import { rootSaga } from "./sagas";
 
-const store = createStore(combineReducers({
-    reservation,
-    reservationInformation
-}), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(
+    combineReducers({ reservation, reservationInformation, escapeRoomsReducer, disableDate, getTicketsReducer }),
+    applyMiddleware(sagaMiddleware)
+)
+
+sagaMiddleware.run(rootSaga);
 
 
 export default store

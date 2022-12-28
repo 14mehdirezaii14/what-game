@@ -110,21 +110,72 @@ const Step2 = () => {
     const [ChoiceDay, setChoiceDay] = useState(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD')).replace('0:00:00', ''))
     const dispatch = useDispatch()
     useEffect(() => {
-        Axios.get(`getDisableDate/?idGame=${state.reservationInformation.idGame}`).then((res) => {
-            if (res.data.length > 0) {
-                console.log(res)
-                setDisableDate()
-                res.data.map((i) => {
-                    setDisableDate([...disableDate, {
-                        disabled: true,
-                        start: i.date,
-                        end: i.date
-                    },]
-                    )
-                })
-            }
-        })
+        const idProduct = window.location.hash.split('/')[2]
+        dispatch({ type: 'DISABLE_DATE_WATCH', peyload: { idProduct } })
+        dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
     }, [])
+    useEffect(() => {
+        if (state.disableDate.length > 0) {
+            state.disableDate.map((i) => {
+                setDisableDate([...disableDate, {
+                    disabled: true,
+                    start: i.date,
+                    end: i.date
+                },]
+                )
+            })
+        }
+        let newList = []
+        if(state.getTicketsReducer.length > 0){
+            listTime.map((time) => {
+                console.log(time)
+                state.getTicketsReducer.map((item) => {
+                    console.log(item)
+                    if (time.time === item.timee) {
+                        newList.push({
+                            time: time.time,
+                            price: time.price,
+                            disable: true
+                        })
+                    } else {
+                        newList.push({
+                            time: time.time,
+                            price: time.price,
+                            disable: false
+                        })
+                    }
+                })
+            })
+        }
+        console.log(newList)
+        // let newList = []
+        // let newList2 = []
+        // if (state.getTicketsReducer.length > 0) {
+        //     state.getTicketsReducer.map((item) => {
+        //         newList.push({
+        //             time: item.timee,
+        //             price: item.price,
+        //             disable: true
+        //         })
+        //     })
+
+        // }
+        // newList.concat(...listTime)
+
+        setListTime(newList)
+
+
+        // listTime.map((time) => {
+        //     state.getTicketsReducer.map((item) => {
+        //         if(time.time === item.timee){
+        //             console.log('برابر')
+        //         }else{
+        //             console.log('نا برابر')
+        //         }
+        //     })
+        // })
+
+    }, [state])
     useEffect(() => {
         if (timee !== 'انتخاب سانس' && numberOfPersons !== 'انتخاب نفرات') {
             setStateBtn(false)
@@ -143,47 +194,13 @@ const Step2 = () => {
         setTimee(item.time)
     }
     const changeDate = (value) => {
-        const dateStr = new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', '')
         setDate(value.format("YYYY/M/D"))
+        const idProduct = window.location.hash.split('/')[2]
+        const dateStr = new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', '')
         setChoiceDay(dateStr)
-        Axios.get(`ticket/?date=${value.format("YYYY/M/D")}&idGame=${state.reservationInformation.idGame}`).then((res) => {
-            let newList = [];
-            if (res.data.length > 0) {
-                res.data.map((item) => {
-                    newList.push(listTime.filter((time) => {
-                        if (item.timee === time.time) {
-                            time.disable = true
-                        }
-                        return item
-
-                    }))
-                })
-                // res.data.map((item) => {
-                //     listTime.map((listItem) => {
-                //         console.log("listItem", listItem)
-                //         console.log("item", item)
-                //         if (item.timee === listItem.time) {
-                //             listItem.disable = true
-                //             newList.push({
-                //                 time: listItem.time,
-                //                 price: listItem.price,
-                //                 disable: true
-                //             },)
-                //         } else {
-                //             newList.push({
-                //                 time: listItem.time,
-                //                 price: listItem.price,
-                //                 disable: false
-                //             },)
-                //         }
-                //     })
-                // })
-                console.log(newList)
-                setListTime(newList[0])
-            }
+        dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: value.format("YYYY/M/D") } })
 
 
-        })
     }
     return (
         <div className="py-5 my-5">

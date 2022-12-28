@@ -3,18 +3,20 @@ import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 import axios from 'axios';
 import Slider from "react-slick";
-
+import { useSelector, useDispatch } from 'react-redux'
 
 const UpcomingWorld = () => {
 	const slider = useRef();
 	const [activeRooms, setActiveRooms] = useState([]);
+	const dispatch = useDispatch()
+	const state = useSelector(state => state)
 	let publicUrl = process.env.PUBLIC_URL + '/'
 	useEffect(() => {
-		axios.get('http://127.0.0.1:8000/EscapeRoomGet/').then((res) => {
-			console.log("<><><><><><><><><><><><><><><>", res.data)
-			setActiveRooms(res.data)
-		})
+		dispatch({ type: 'GET_ESCAPE_ROOMS' })
 	}, [])
+	useEffect(() => {
+		setActiveRooms(state.escapeRoomsReducer)
+	}, [state])
 	const settings = {
 		dots: true,
 		infinite: false,
@@ -51,7 +53,7 @@ const UpcomingWorld = () => {
 					</div>
 					{!activeRooms ? null :
 						<Slider lazyLoad={true} infinite={false} ref={slider} arrows={false} dotsClass={'d-none'} dots={false}  {...settings}>
-							{activeRooms.map( (slide, index) => {
+							{activeRooms.map((slide, index) => {
 								return (
 
 									<div data-index={index} key={slide.id} className="single-upconing-card">
@@ -95,7 +97,7 @@ const UpcomingWorld = () => {
 
 								);
 							})}
-							
+
 
 						</Slider>}
 

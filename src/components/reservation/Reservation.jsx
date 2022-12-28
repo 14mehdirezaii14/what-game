@@ -15,17 +15,17 @@ const Reservation = () => {
     const state = useSelector(state => state)
     const dispatch = useDispatch()
     const [game, setGame] = useState()
+
     useEffect(() => {
-        const idProduct = window.location.hash.split('/')[2]
-        Axios.get('http://127.0.0.1:8000/EscapeRoomGet/').then((res) => {
-            setGame(...res.data.filter((item) => {
-                console.log(item.id == idProduct)
-                return item.id == idProduct
-            }))
-        })
+        if (state.escapeRoomsReducer.length < 1) {
+            dispatch({ type: 'GET_ESCAPE_ROOMS' })
+        }
     }, [])
     useEffect(() => {
-        console.log('change')
+        const idProduct = window.location.hash.split('/')[2]
+        setGame(...state.escapeRoomsReducer.filter((item) => {
+            return item.id == idProduct
+        }))
     }, [state])
     useEffect(() => {
 

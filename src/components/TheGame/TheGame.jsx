@@ -3,21 +3,23 @@ import { useEffect, useState } from "react";
 import Navbar from "../global-components/navbar";
 import './TheGame.css'
 import Gameinformationbox from "../Gameinformationbox/Gameinformationbox"
-
+import { useSelector, useDispatch } from 'react-redux'
 import Axios from "../../api/axios";
 const TheGame = () => {
     const [game, setGame] = useState()
-
+    const dispatch = useDispatch()
+    const state = useSelector(state => state)
     useEffect(() => {
-        // console.log("<><><><><><><><><><>", window.location.hash.split('/')[2])
-        const idProduct = window.location.hash.split('/')[2]
-        Axios.get('http://127.0.0.1:8000/EscapeRoomGet/').then((res) => {
-            setGame(...res.data.filter((item) => {
-                console.log(item.id == idProduct)
-                return item.id == idProduct
-            }))
-        })
+        if (state.escapeRoomsReducer.length < 1) {
+            dispatch({ type: 'GET_ESCAPE_ROOMS' })
+        }
     }, [])
+    useEffect(() => {
+        const idProduct = window.location.hash.split('/')[2]
+        setGame(...state.escapeRoomsReducer.filter((item) => {
+            return item.id == idProduct
+        }))
+    }, [state])
     return <div>
         <Navbar />
         <div className="divVideoGame position-relative">
