@@ -59,12 +59,12 @@ class Navbar extends Component {
 							</Link>
 						</div>
 						<ul className="navbar-nav">
-							<li className="menu-item-has-children text-right">
+							{/* <li className="menu-item-has-children text-right">
 								<Link to="/">اتاق فرار</Link>
 								<ul className="sub-menu">
 									<li><Link to="/the-game">The Game</Link></li>
 								</ul>
-							</li>
+							</li> */}
 							{/* <li>
 			          <Link to="/about">About Us</Link>
 			        </li> */}

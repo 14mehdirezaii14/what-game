@@ -21,43 +21,6 @@ import Axios from "../../../api/axios";
 // ]
 
 
-// const listTime = [
-//     {
-//         time: 'ساعت 11',
-//         price: '105,000 هزار تومان',
-//         disable: true
-//     },
-//     {
-//         time: 'ساعت 13',
-//         price: '105,000 هزار تومان',
-//         disable: false
-//     },
-//     {
-//         time: 'ساعت 15',
-//         price: '130,000 هزار تومان',
-//         disable: false
-//     },
-//     {
-//         time: 'ساعت 17',
-//         price: '130,000 هزار تومان',
-//         disable: false
-//     },
-//     {
-//         time: 'ساعت 19',
-//         price: '130,000 هزار تومان',
-//         disable: false
-//     },
-//     {
-//         time: 'ساعت 21',
-//         price: '150,000 هزار تومان',
-//         disable: false
-//     },
-//     {
-//         time: 'ساعت 23',
-//         price: '150,000 هزار تومان',
-//         disable: false
-//     },
-// ]
 
 const Step2 = () => {
     const [stateBtn, setStateBtn] = useState(true)
@@ -69,114 +32,78 @@ const Step2 = () => {
         start: momentJalaali().add(-1000, 'days'),
         end: momentJalaali().add(-1, 'days')
     },])
-    const [listTime, setListTime] = useState([
-        {
-            time: 'ساعت 11',
-            price: '105,000 هزار تومان',
-            disable: false
-        },
-        {
-            time: 'ساعت 13',
-            price: '105,000 هزار تومان',
-            disable: false
-        },
-        {
-            time: 'ساعت 15',
-            price: '130,000 هزار تومان',
-            disable: false
-        },
-        {
-            time: 'ساعت 17',
-            price: '130,000 هزار تومان',
-            disable: false
-        },
-        {
-            time: 'ساعت 19',
-            price: '130,000 هزار تومان',
-            disable: false
-        },
-        {
-            time: 'ساعت 21',
-            price: '150,000 هزار تومان',
-            disable: false
-        },
-        {
-            time: 'ساعت 23',
-            price: '150,000 هزار تومان',
-            disable: false
-        },
-    ])
+
     const state = useSelector((state) => state)
     const [ChoiceDay, setChoiceDay] = useState(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD')).replace('0:00:00', ''))
     const dispatch = useDispatch()
     useEffect(() => {
         const idProduct = window.location.hash.split('/')[2]
+        // FETCH DISABLE DATE
         dispatch({ type: 'DISABLE_DATE_WATCH', peyload: { idProduct } })
+        // FETCH DISABLE SANS
         dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
     }, [])
     useEffect(() => {
+        let newList = []
+        // CHECK DISABLE DATE
         if (state.disableDate.length > 0) {
             state.disableDate.map((i) => {
-                setDisableDate([...disableDate, {
-                    disabled: true,
-                    start: i.date,
-                    end: i.date
-                },]
-                )
+                let dateindexLast = parseInt(i.date.split('/')[2])
+                let datePlus = dateindexLast += 1
+                let newDate = i.date.split('/')[0] + '/' + i.date.split('/')[1] + '/' + datePlus
+
+                console.log(datePlus)
+                if (datePlus != 32) {
+                    newList.push({
+                        disabled: true,
+                        start: newDate,
+                        end: i.date,
+                    })
+                    // setDisableDate([...disableDate, {
+                    //     disabled: true,
+                    //     start: newDate,
+                    //     end: i.date,
+                    // },])
+                } else {
+                    newList.push({
+                        disabled: true,
+                        start: i.date,
+                        end: i.date,
+                    })
+                    // setDisableDate([...disableDate, {
+                    //     disabled: true,
+                    //     start: i.date,
+                    //     end: i.date,
+                    // },])
+                }
             })
+            console.log(newList)
         }
-        let newList = []
-        if(state.getTicketsReducer.length > 0){
-            listTime.map((time) => {
-                console.log(time)
-                state.getTicketsReducer.map((item) => {
-                    console.log(item)
-                    if (time.time === item.timee) {
-                        newList.push({
-                            time: time.time,
-                            price: time.price,
-                            disable: true
-                        })
-                    } else {
-                        newList.push({
-                            time: time.time,
-                            price: time.price,
-                            disable: false
-                        })
-                    }
-                })
-            })
-        }
-        console.log(newList)
-        // let newList = []
-        // let newList2 = []
-        // if (state.getTicketsReducer.length > 0) {
-        //     state.getTicketsReducer.map((item) => {
-        //         newList.push({
-        //             time: item.timee,
-        //             price: item.price,
-        //             disable: true
-        //         })
-        //     })
-
-        // }
-        // newList.concat(...listTime)
-
-        setListTime(newList)
-
-
-        // listTime.map((time) => {
-        //     state.getTicketsReducer.map((item) => {
-        //         if(time.time === item.timee){
-        //             console.log('برابر')
-        //         }else{
-        //             console.log('نا برابر')
-        //         }
-        //     })
-        // })
-
+        setDisableDate([...disableDate, ...newList])
     }, [state])
+
     useEffect(() => {
+        console.log(disableDate)
+    }, [disableDate])
+
+    // <><><><><><><><><><><>
+    useEffect(() => {
+        // CHECK DISABLE SANS
+        if (state.getTicketsReducer.length >= 0) {
+            console.log('change getTicketsReducer')
+            state.getTicketsReducer.map((ticket) => {
+                if (ticket.date === moment(date).format('YYYY/M/D')) {
+                    dispatch({ type: 'DISABLE_SANS_WATCH', peyload: ticket.timee })
+                }
+            })
+        }
+    }, [state.getTicketsReducer])
+
+
+
+
+    useEffect(() => {
+        // ACTIVE BTN NEXT
         if (timee !== 'انتخاب سانس' && numberOfPersons !== 'انتخاب نفرات') {
             setStateBtn(false)
         }
@@ -199,8 +126,7 @@ const Step2 = () => {
         const dateStr = new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', '')
         setChoiceDay(dateStr)
         dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: value.format("YYYY/M/D") } })
-
-
+        dispatch({ type: 'ACTIVE_SANS_WATCH' })
     }
     return (
         <div className="py-5 my-5">
@@ -255,10 +181,10 @@ const Step2 = () => {
                 </a>
                 <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
 
-                    {listTime.map((item, index) => {
+                    {state.SansReducer.map((item, index) => {
                         if (item.disable) {
                             return (
-                                <></>
+                                <div className="text-danger px-4">غیر فعال</div>
                             )
                         }
                         return (
