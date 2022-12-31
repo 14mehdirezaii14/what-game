@@ -4,21 +4,9 @@ import { Calendar } from 'react-datepicker2';
 import momentJalaali from 'moment-jalaali';
 
 import { useSelector, useDispatch } from 'react-redux'
-import Axios from "../../../api/axios";
 
 
-// const disableDate = [
-//     {
-//         disabled: true,
-//         start: momentJalaali().add(-1000, 'days'),
-//         end: momentJalaali().add(-1, 'days')
-//     },
-//     {
-//         disabled: true,
-//         start: '2022/12/25',
-//         end: '2022/12/25'
-//     },
-// ]
+
 
 
 
@@ -43,6 +31,7 @@ const Step2 = () => {
         // FETCH DISABLE SANS
         dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
     }, [])
+
     useEffect(() => {
         let newList = []
         // CHECK DISABLE DATE
@@ -51,33 +40,20 @@ const Step2 = () => {
                 let dateindexLast = parseInt(i.date.split('/')[2])
                 let datePlus = dateindexLast += 1
                 let newDate = i.date.split('/')[0] + '/' + i.date.split('/')[1] + '/' + datePlus
-
-                console.log(datePlus)
                 if (datePlus != 32) {
                     newList.push({
                         disabled: true,
                         start: newDate,
                         end: i.date,
                     })
-                    // setDisableDate([...disableDate, {
-                    //     disabled: true,
-                    //     start: newDate,
-                    //     end: i.date,
-                    // },])
                 } else {
                     newList.push({
                         disabled: true,
                         start: i.date,
                         end: i.date,
                     })
-                    // setDisableDate([...disableDate, {
-                    //     disabled: true,
-                    //     start: i.date,
-                    //     end: i.date,
-                    // },])
                 }
             })
-            console.log(newList)
         }
         setDisableDate([...disableDate, ...newList])
     }, [state])
@@ -90,7 +66,6 @@ const Step2 = () => {
     useEffect(() => {
         // CHECK DISABLE SANS
         if (state.getTicketsReducer.length >= 0) {
-            console.log('change getTicketsReducer')
             state.getTicketsReducer.map((ticket) => {
                 if (ticket.date === moment(date).format('YYYY/M/D')) {
                     dispatch({ type: 'DISABLE_SANS_WATCH', peyload: ticket.timee })
