@@ -8413,11 +8413,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     color: #fff;
 }
 
-
-/* .offer-area {
-    direction: ltr;
-} */
-
 ul {
     list-style: none;
 }
@@ -8426,9 +8421,14 @@ ul {
     height: 500px;
 }
 
+.highLightDot {
+    z-index: 10 !important;
+}
 
-/* 
 .slick-track {
-    width: 100% !important;
-    text-align: center !important;
-} */
+    display: flex;
+}
+
+.pointer {
+    cursor: pointer !important;
+}

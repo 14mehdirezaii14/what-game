@@ -1,4 +1,5 @@
 function reservation(state = { step: 1 }, action) {
+    console.log(action)
     switch (action.type) {
         case 'step0':
             return { step: 1 }

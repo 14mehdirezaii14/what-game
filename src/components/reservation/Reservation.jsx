@@ -20,17 +20,20 @@ const Reservation = () => {
         if (state.escapeRoomsReducer.length < 1) {
             dispatch({ type: 'GET_ESCAPE_ROOMS' })
         }
+        return () => {
+            dispatch({ type: 'step0' })
+        }
     }, [])
     useEffect(() => {
         const idProduct = window.location.hash.split('/')[2]
         setGame(...state.escapeRoomsReducer.filter((item) => {
             return item.id == idProduct
         }))
+
     }, [state])
     useEffect(() => {
 
         if (game) {
-            console.log(game)
             dispatch({ type: 'nameGame', peyload: { nameGame: game.name } })
             dispatch({ type: 'setPrice', peyload: { price: game.price } })
             dispatch({ type: 'idGame', peyload: { idGame: game.id } })

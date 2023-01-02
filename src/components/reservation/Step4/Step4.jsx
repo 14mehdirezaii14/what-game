@@ -7,7 +7,6 @@ const Step4 = () => {
     let publicUrl = process.env.PUBLIC_URL + '/'
 
     const payment = () => {
-        console.log(state)
         reservationApi(state.reservationInformation)
     }
     return (

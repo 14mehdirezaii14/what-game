@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 const Step2 = () => {
     const [stateBtn, setStateBtn] = useState(true)
-    const [date, setDate] = useState(momentJalaali(moment().format("YYYY/M/D"), 'YYYY/M/D'))
+    const [date, setDate] = useState()
     const [timee, setTimee] = useState('انتخاب سانس')
     const [numberOfPersons, setNumberOfPersons] = useState('انتخاب نفرات')
     const [disableDate, setDisableDate] = useState([{
@@ -23,18 +23,22 @@ const Step2 = () => {
 
     const state = useSelector((state) => state)
     const [ChoiceDay, setChoiceDay] = useState(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD')).replace('0:00:00', ''))
+    const [activeSans, setActiveSans] = useState([])
     const dispatch = useDispatch()
+    const [game, setGame] = useState()
     useEffect(() => {
         const idProduct = window.location.hash.split('/')[2]
         // FETCH DISABLE DATE
         dispatch({ type: 'DISABLE_DATE_WATCH', peyload: { idProduct } })
         // FETCH DISABLE SANS
         dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
+        dispatch({ type: 'ACTIVE_SANS_WATCH' })
     }, [])
 
     useEffect(() => {
         let newList = []
         // CHECK DISABLE DATE
+        console.log(state.disableDate)
         if (state.disableDate.length > 0) {
             state.disableDate.map((i) => {
                 let dateindexLast = parseInt(i.date.split('/')[2])
@@ -55,13 +59,16 @@ const Step2 = () => {
                 }
             })
         }
-        setDisableDate([...disableDate, ...newList])
-    }, [state])
+        setDisableDate([{
+            disabled: true,
+            start: momentJalaali().add(-1000, 'days'),
+            end: momentJalaali().add(-1, 'days')
+        }, ...newList])
+    }, [state.disableDate, state.SansReducer])
 
     useEffect(() => {
-        console.log(disableDate)
-    }, [disableDate])
-
+        console.log("<><><><><><><><><><><><><><>state.SansReducer<><><><><><><><><", state.SansReducer)
+    }, [state.SansReducer])
     // <><><><><><><><><><><>
     useEffect(() => {
         // CHECK DISABLE SANS
@@ -74,7 +81,29 @@ const Step2 = () => {
         }
     }, [state.getTicketsReducer])
 
+    useEffect(() => {
+        const idProduct = window.location.hash.split('/')[2]
+        let simpleListPriceSans = {
+            ...state.escapeRoomsReducer.filter((item) => {
+                return item.id == idProduct
+            })
+        }[0]
+        setGame(
+            [simpleListPriceSans.priceSans1,
+            simpleListPriceSans.priceSans2,
+            simpleListPriceSans.priceSans3,
+            simpleListPriceSans.priceSans4,
+            simpleListPriceSans.priceSans5,
+            simpleListPriceSans.priceSans6,
+            simpleListPriceSans.priceSans7,
+            ]
+        )
 
+
+    }, [state.escapeRoomsReducer])
+    useEffect(() => {
+        console.log(state)
+    }, [state])
 
 
     useEffect(() => {
@@ -84,8 +113,9 @@ const Step2 = () => {
         }
     }, [numberOfPersons, timee])
 
+
+
     const next = () => {
-        console.log(moment(date).format('YYYY/M/D'))
         dispatch({ type: 'setDate', peyload: { date: moment(date).format('YYYY/M/D'), numberOfPersons, timee } })
         dispatch({ type: 'step2' })
     }
@@ -96,12 +126,14 @@ const Step2 = () => {
         setTimee(item.time)
     }
     const changeDate = (value) => {
-        setDate(value.format("YYYY/M/D"))
+        const date = value.format("YYYY/M/D")
         const idProduct = window.location.hash.split('/')[2]
         const dateStr = new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', '')
+        setDate(date)
         setChoiceDay(dateStr)
-        dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: value.format("YYYY/M/D") } })
+        dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date } })
         dispatch({ type: 'ACTIVE_SANS_WATCH' })
+
     }
     return (
         <div className="py-5 my-5">
@@ -115,14 +147,13 @@ const Step2 = () => {
             <div className="CalendarParent">
                 <Calendar
                     value={date}
-
                     ranges={disableDate}
+
                     inputFormat="YYYY/MM/DDD"
                     isGregorian={false}
                     // ref={datePickerRef}
                     onChange={value => {
                         changeDate(value)
-
                     }}
                     timePicker={false}
                     calendarStartDay={5}
@@ -159,13 +190,16 @@ const Step2 = () => {
                     {state.SansReducer.map((item, index) => {
                         if (item.disable) {
                             return (
-                                <div className="text-danger px-4">غیر فعال</div>
+                                <div key={index} className="px-4 d-flex my-3">
+                                    <span className="float-right">{item.time} </span>
+                                    <span className="text-danger small mr-4">غیر فعال</span>
+                                </div>
                             )
                         }
                         return (
-                            <a key={index} type="button" aria-disabled={true} onClick={() => clickSans(item)} className=" py-2 px-3 text-right btn-block" >
+                            <a key={index} type="button" aria-disabled={true} onClick={() => clickSans(item)} className=" py-2 px-3 text-right btn-block pointer" >
                                 <span className="float-right">{item.time} </span>
-                                <span className="mr-3 text-danger small">{item.price}</span>
+                                <span className="mr-3 text-danger small">{game ? `${game[index]} تومان` : null}</span>
                             </a>
                         )
                     })}

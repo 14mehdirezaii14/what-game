@@ -10,14 +10,11 @@ const Step3 = () => {
     const [email, setEmail] = useState()
     const [phone, setPhone] = useState()
     useEffect(() => {
-        console.log(state)
         if (name  && lastName  && email && phone ) {
             setStateBtn(false)
         }
-        console.log(lastName)
     }, [name, lastName, email, phone])
     const next = () => {
-        console.log(name)
         dispatch({ type: 'UserProfile', peyload: { name, lastName, email, phone } })
         dispatch({ type: 'step3' })
     }
@@ -32,7 +29,6 @@ const Step3 = () => {
                 <div className="col-md-6 my-3">
                     <span>نام</span>
                     <input value={name} onChange={e => {
-                        console.log(e.target.value)
                         setName(e.target.value)
                     }} type="text" className="form-control input" />
                 </div>

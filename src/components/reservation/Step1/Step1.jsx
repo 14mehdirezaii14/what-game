@@ -5,9 +5,7 @@ const Step1 = () => {
     const [stateBtn, setStateBtn] = useState(true)
     const state = useSelector((state) => state)
     const dispatch = useDispatch()
-    useEffect(() => {
-        console.log(state)
-    }, [])
+
     return (
         <div className="pl-4">
             <div className="row">
