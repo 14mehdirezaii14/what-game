@@ -31,7 +31,7 @@ const TheGame = () => {
         </div>
         {game ? <div className="container mt-5">
             <div className="row">
-                <div className="col-md-9 text-right">
+                <div className="col-md-8 text-right">
                     {/* scenario */}
                     <div>
                         <h3>سناریو</h3>
@@ -69,7 +69,7 @@ const TheGame = () => {
                         </p>
                     </div>
                 </div>
-                <div className="col-md-3 text-left">
+                <div className="col-md-4 text-left">
                     <Gameinformationbox game={game} />
                 </div>
 

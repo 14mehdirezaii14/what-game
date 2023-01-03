@@ -14,7 +14,6 @@ const store = createStore(
     combineReducers({
         reservationInformation,
         escapeRoomsReducer,
-        getTicketsReducer,
         reservation,
         disableDate,
         SansReducer

@@ -57,18 +57,7 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
-    .step1::after {
-        width: 175px !important;
-        right: 149px !important;
-    }
-    .step2::after {
-        width: 165px !important;
-    }
-    .step3::after {
-        width: 160px !important;
-    }
-}
+
 
 @media screen and (max-width: 1200px) {
     .step1::after {

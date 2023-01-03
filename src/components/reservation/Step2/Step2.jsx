@@ -28,60 +28,45 @@ const Step2 = () => {
     const [game, setGame] = useState()
     useEffect(() => {
         const idProduct = window.location.hash.split('/')[2]
-        // FETCH DISABLE DATE
-        dispatch({ type: 'DISABLE_DATE_WATCH', peyload: { idProduct } })
-        // FETCH DISABLE SANS
-        dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
-        dispatch({ type: 'ACTIVE_SANS_WATCH' })
+        // GET SANS
+        dispatch({ type: 'GET_SANS_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
     }, [])
 
-    useEffect(() => {
-        let newList = []
-        // CHECK DISABLE DATE
-        console.log(state.disableDate)
-        if (state.disableDate.length > 0) {
-            state.disableDate.map((i) => {
-                let dateindexLast = parseInt(i.date.split('/')[2])
-                let datePlus = dateindexLast += 1
-                let newDate = i.date.split('/')[0] + '/' + i.date.split('/')[1] + '/' + datePlus
-                if (datePlus != 32) {
-                    newList.push({
-                        disabled: true,
-                        start: newDate,
-                        end: i.date,
-                    })
-                } else {
-                    newList.push({
-                        disabled: true,
-                        start: i.date,
-                        end: i.date,
-                    })
-                }
-            })
-        }
-        setDisableDate([{
-            disabled: true,
-            start: momentJalaali().add(-1000, 'days'),
-            end: momentJalaali().add(-1, 'days')
-        }, ...newList])
-    }, [state.disableDate, state.SansReducer])
+    // useEffect(() => {
+    //     let newList = []
+    //     // CHECK DISABLE DATE
+    //     console.log(state.disableDate)
+    //     if (state.disableDate.length > 0) {
+    //         state.disableDate.map((i) => {
+    //             let dateindexLast = parseInt(i.date.split('/')[2])
+    //             let datePlus = dateindexLast += 1
+    //             let newDate = i.date.split('/')[0] + '/' + i.date.split('/')[1] + '/' + datePlus
+    //             if (datePlus != 32) {
+    //                 newList.push({
+    //                     disabled: true,
+    //                     start: newDate,
+    //                     end: i.date,
+    //                 })
+    //             } else {
+    //                 newList.push({
+    //                     disabled: true,
+    //                     start: i.date,
+    //                     end: i.date,
+    //                 })
+    //             }
+    //         })
+    //     }
+    //     setDisableDate([{
+    //         disabled: true,
+    //         start: momentJalaali().add(-1000, 'days'),
+    //         end: momentJalaali().add(-1, 'days')
+    //     }, ...newList])
+    // }, [state.disableDate, state.SansReducer])
+
+
 
     useEffect(() => {
-        console.log("<><><><><><><><><><><><><><>state.SansReducer<><><><><><><><><", state.SansReducer)
-    }, [state.SansReducer])
-    // <><><><><><><><><><><>
-    useEffect(() => {
-        // CHECK DISABLE SANS
-        if (state.getTicketsReducer.length >= 0) {
-            state.getTicketsReducer.map((ticket) => {
-                if (ticket.date === moment(date).format('YYYY/M/D')) {
-                    dispatch({ type: 'DISABLE_SANS_WATCH', peyload: ticket.timee })
-                }
-            })
-        }
-    }, [state.getTicketsReducer])
-
-    useEffect(() => {
+        // Ordered PRICE SANS
         const idProduct = window.location.hash.split('/')[2]
         let simpleListPriceSans = {
             ...state.escapeRoomsReducer.filter((item) => {
@@ -131,9 +116,7 @@ const Step2 = () => {
         const dateStr = new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(value).replace('0:00:00', '')
         setDate(date)
         setChoiceDay(dateStr)
-        dispatch({ type: 'GET_TICKETS_REDUCER_WATCH', peyload: { idProduct, date } })
-        dispatch({ type: 'ACTIVE_SANS_WATCH' })
-
+        dispatch({ type: 'GET_SANS_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
     }
     return (
         <div className="py-5 my-5">
