@@ -455,7 +455,7 @@
         padding-top: 80px;
     }
     .single-upconing-card .content {
-        height: 40%;
+        /* height: 40%; */
         padding: 8px;
     }
 }

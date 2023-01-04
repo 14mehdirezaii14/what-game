@@ -19,142 +19,69 @@ class Offer extends Component {
 					</div>
 				</div>
 			</div> */}
-			<div className="destinations-list-slider-bg">
+			<div className="destinations-list-slider-bg" style={{ direction: 'rtl' }}>
 				<div className="container">
 					<div className="row">
-						<div style={{direction:'ltr'}} className="col-xl-9 col-lg-10 mr-5 order-lg-12">
-							<div className="destinations-list-slider">
-								<div className="d-list-slider-item">
-									<div className="single-destinations-list text-center">
-										<div className="thumb">
-											<span className="d-list-tag">Special Offer</span>
-											<img src={publicUrl + "assets/img/destination-list/1.png"} alt="list" />
-											<div className="d-list-btn-wrap">
-												<div className="d-list-btn viaje-go-top">
-													<Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-												</div>
-											</div>
-										</div>
-										<div className="details">
-											<h4 className="title">Greece</h4>
-											<p className="content">Atmosphere of the sunny country</p>
-											<ul className="tp-list-meta border-bt-dot">
-												<li><i className="fa fa-calendar-o" /> 8oct</li>
-												<li><i className="fa fa-clock-o" /> 4 days</li>
-												<li><i className="fa fa-star" /> 4.3</li>
-											</ul>
-											<div className="tp-price-meta tp-price-meta-cl">
-												<p>Price</p>
-												<h2>620 <small>$</small></h2>
-												<del>620<span>$</span></del>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="d-list-slider-item">
-									<div className="single-destinations-list text-center">
-										<div className="thumb">
-											<img src={publicUrl + "assets/img/destination-list/2.png"} alt="list" />
-											<div className="d-list-btn-wrap">
-												<div className="d-list-btn viaje-go-top">
-													<Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-												</div>
-											</div>
-										</div>
-										<div className="details">
-											<h4 className="title">Italy</h4>
-											<p className="content">Atmosphere of the sunny country</p>
-											<ul className="tp-list-meta border-bt-dot">
-												<li><i className="fa fa-calendar-o" /> 8oct</li>
-												<li><i className="fa fa-clock-o" /> 4 days</li>
-												<li><i className="fa fa-star" /> 4.3</li>
-											</ul>
-											<div className="tp-price-meta tp-price-meta-cl">
-												<p>Price</p>
-												<h2>620 <small>$</small></h2>
-												<del>620<span>$</span></del>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="d-list-slider-item">
-									<div className="single-destinations-list text-center">
-										<div className="thumb">
-											<span className="d-list-tag">Special Offer</span>
-											<img src={publicUrl + "assets/img/destination-list/3.png"} alt="list" />
-											<div className="d-list-btn-wrap">
-												<div className="d-list-btn viaje-go-top">
-													<Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-												</div>
-											</div>
-										</div>
-										<div className="details">
-											<h4 className="title">Canada</h4>
-											<p className="content">Atmosphere of the sunny country</p>
-											<ul className="tp-list-meta border-bt-dot">
-												<li><i className="fa fa-calendar-o" /> 8oct</li>
-												<li><i className="fa fa-clock-o" /> 4 days</li>
-												<li><i className="fa fa-star" /> 4.3</li>
-											</ul>
-											<div className="tp-price-meta tp-price-meta-cl">
-												<p>Price</p>
-												<h2>620 <small>$</small></h2>
-												<del>620<span>$</span></del>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="d-list-slider-item">
-									<div className="single-destinations-list text-center">
-										<div className="thumb">
-											<span className="d-list-tag">Special Offer</span>
-											<img src={publicUrl + "assets/img/destination-list/1.png"} alt="list" />
-											<div className="d-list-btn-wrap">
-												<div className="d-list-btn viaje-go-top" >
-													<Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
-												</div>
-											</div>
-										</div>
-										<div className="details">
-											<h4 className="title">Greece</h4>
-											<p className="content">Atmosphere of the sunny country</p>
-											<ul className="tp-list-meta border-bt-dot">
-												<li><i className="fa fa-calendar-o" /> 8oct</li>
-												<li><i className="fa fa-clock-o" /> 4 days</li>
-												<li><i className="fa fa-star" /> 4.3</li>
-											</ul>
-											<div className="tp-price-meta tp-price-meta-cl">
-												<p>Price</p>
-												<h2>620 <small>$</small></h2>
-												<del>620<span>$</span></del>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-lg-2 align-self-center order-lg-11">
-							<div className="container">
+						<div className="col-lg-3 ">
+							<div className="container px-5 py-5">
 								<h3 className='text-light'>
 									سورپرایز در مناسبت ها
 								</h3>
-								<div className="destinations-slider-controls mt-5">
-									<div className="slider-nav tp-control-nav" />
-									{/*slider-nav*/}
-									<div className="tp-slider-extra slider-extra">
-										<div className="text">
-											<span className="first">01 </span>
-											<span className="last" />
-										</div>
-										{/*text*/}
-										<div className="d-list-progress" role="progressbar" aria-valuemin={0} aria-valuemax={100}>
-											<span className="slider__label sr-only" />
-										</div>
-									</div>
-									{/*slider-extra*/}
-								</div>
+								<p className="mt-5 text-right">
+									تا حالا فکر کردین برای سورپرایز و غافلگیر کردن عزیزانتون در مناسبت های مختلف مثل تولد یا سالگرد آشنایی و.... ، فضا و حال و هوای متفاوتی رو انتخاب کنید؟!
+									چه جایی متفاوت تر و جذاب تر از یک اتاق فرار خوب و عالی؟!
+								</p>
 							</div>
 						</div>
+						<div className="col-lg-9">
+							<div className="row">
+								<div className="col-md-4">
+									<div className="p-3">
+										<img src="/assets/img/raychan-Q3Vefy3v7L0-unsplash.png" className='rounded  img-fluid' alt="" />									</div>
+								</div>
+								<div className="col-md-4">
+									<div className="p-3">
+										<img src="/assets/img/aral-tasher-DKaSZmMCyP0-unsplash.png" className='rounded img-fluid' alt="" />									</div>
+								</div>
+								<div className="col-md-4">
+									<div className="p-3">
+										<img src="/assets/img/danielle-suijkerbuijk-8D__BFusfUQ-unsplash (1).png" className='rounded img-fluid' alt="" />									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+
+
+						{/* <div className="d-list-slider-item">
+							<div className="single-destinations-list text-center">
+								<div className="thumb">
+									<img src={publicUrl + "assets/img/destination-list/2.png"} alt="list" />
+									<div className="d-list-btn-wrap">
+										<div className="d-list-btn viaje-go-top">
+											<Link className="btn btn-yellow" to="/contact">Book Now <i className="fa fa-paper-plane" /></Link>
+										</div>
+									</div>
+								</div>
+								<div className="details">
+									<h4 className="title">Italy</h4>
+									<p className="content">Atmosphere of the sunny country</p>
+									<ul className="tp-list-meta border-bt-dot">
+										<li><i className="fa fa-calendar-o" /> 8oct</li>
+										<li><i className="fa fa-clock-o" /> 4 days</li>
+										<li><i className="fa fa-star" /> 4.3</li>
+									</ul>
+									<div className="tp-price-meta tp-price-meta-cl">
+										<p>Price</p>
+										<h2>620 <small>$</small></h2>
+										<del>620<span>$</span></del>
+									</div>
+								</div>
+							</div>
+						</div> */}
+
+
 					</div>
 				</div>
 			</div>

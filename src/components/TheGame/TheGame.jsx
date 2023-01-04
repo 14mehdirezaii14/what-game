@@ -4,7 +4,6 @@ import Navbar from "../global-components/navbar";
 import './TheGame.css'
 import Gameinformationbox from "../Gameinformationbox/Gameinformationbox"
 import { useSelector, useDispatch } from 'react-redux'
-import Axios from "../../api/axios";
 const TheGame = () => {
     const [game, setGame] = useState()
     const dispatch = useDispatch()

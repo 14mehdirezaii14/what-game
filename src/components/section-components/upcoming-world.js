@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import axios from 'axios';
 import Slider from "react-slick";
 import { useSelector, useDispatch } from 'react-redux'
-
+import { SERVER_DOMAIN } from '../../constants/global';
 const UpcomingWorld = () => {
 	const slider = useRef();
 	const [activeRooms, setActiveRooms] = useState([]);
@@ -21,9 +21,9 @@ const UpcomingWorld = () => {
 		dots: true,
 		infinite: false,
 		speed: 500,
-		centerMode: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
 		dots: false,
-		centerPadding: '450px',
 		responsive: [
 			{
 				breakpoint: 2348,
@@ -35,8 +35,8 @@ const UpcomingWorld = () => {
 				},
 				breakpoint: 1024,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 1,
+					slidesToScroll: 1,
 					infinite: true,
 					dots: true
 				}
@@ -46,7 +46,6 @@ const UpcomingWorld = () => {
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
-					initialSlide: 2
 				}
 			},
 			{
@@ -64,8 +63,8 @@ const UpcomingWorld = () => {
 	const previous = () => slider.current.slickPrev();
 	return (
 		<>
-			<div className="upcomming-world pd-top-108 viaje-go-top">
-				<div className="container">
+			<div className="upcomming-world pd-top-108 viaje-go-top mb-5 pb-5">
+				<div className="container ">
 					<div className="row">
 						<div className="col-xl-7 col-lg-8">
 							<div className="section-title">
@@ -78,19 +77,19 @@ const UpcomingWorld = () => {
 					{/* single card */}
 
 
-					<div className="d-flex ml-3">
-						<span className="slick-prev slick-arrow" onClick={previous} style={{ display: 'block' }}><i className="la la-long-arrow-left"></i></span>
+					<div className="d-flex ml-3 mb-3">
+						<span className="slick-prev slick-arrow mr-4" onClick={previous} style={{ display: 'block' }}><i className="la la-long-arrow-left"></i></span>
 						<span className="slick-next slick-arrow" onClick={next} style={{ display: 'block' }}><i className="la la-long-arrow-right"></i></span>
 					</div>
 					{!activeRooms ? null :
-						<Slider lazyLoad={true} infinite={false} ref={slider} arrows={false} dotsClass={'d-none'} dots={false}  {...settings}>
+						<Slider infinite={false} ref={slider} arrows={false} dotsClass={'d-none'} dots={false}  {...settings}>
 							{activeRooms.map((slide, index) => {
 								return (
 
 									<div data-index={index} key={slide.id} className="single-upconing-card">
 										<Link to={`/the-game/${slide.id}`}>
-											<div className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
-												<img src={'http://127.0.0.1:8000/' + slide.img} alt="flag" />
+											<div width={500} height={500} className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
+												<img width={500} height={500} src={SERVER_DOMAIN + slide.img} className='img-fluid w-sm-100' alt="flag" />
 											</div>
 											{/* content modal */}
 											<div className="content text-center w-100 bg-dark">
