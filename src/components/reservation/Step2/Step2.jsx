@@ -5,11 +5,6 @@ import momentJalaali from 'moment-jalaali';
 
 import { useSelector, useDispatch } from 'react-redux'
 
-
-
-
-
-
 const Step2 = () => {
     const [stateBtn, setStateBtn] = useState(true)
     const [date, setDate] = useState()
@@ -30,38 +25,61 @@ const Step2 = () => {
         const idProduct = window.location.hash.split('/')[2]
         // GET SANS
         dispatch({ type: 'GET_SANS_WATCH', peyload: { idProduct, date: moment(date).format('YYYY/M/D') } })
+        dispatch({ type: "DISABLE_DATE_WATCH", peyload: { idProduct } })
     }, [])
 
-    // useEffect(() => {
-    //     let newList = []
-    //     // CHECK DISABLE DATE
-    //     console.log(state.disableDate)
-    //     if (state.disableDate.length > 0) {
-    //         state.disableDate.map((i) => {
-    //             let dateindexLast = parseInt(i.date.split('/')[2])
-    //             let datePlus = dateindexLast += 1
-    //             let newDate = i.date.split('/')[0] + '/' + i.date.split('/')[1] + '/' + datePlus
-    //             if (datePlus != 32) {
-    //                 newList.push({
-    //                     disabled: true,
-    //                     start: newDate,
-    //                     end: i.date,
-    //                 })
-    //             } else {
-    //                 newList.push({
-    //                     disabled: true,
-    //                     start: i.date,
-    //                     end: i.date,
-    //                 })
-    //             }
-    //         })
-    //     }
-    //     setDisableDate([{
-    //         disabled: true,
-    //         start: momentJalaali().add(-1000, 'days'),
-    //         end: momentJalaali().add(-1, 'days')
-    //     }, ...newList])
-    // }, [state.disableDate, state.SansReducer])
+    useEffect(() => {
+        let newList = []
+        // CHECK DISABLE DATE
+        let stateDisableDate = state.disableDate
+
+        console.log(stateDisableDate.length)
+        if (stateDisableDate.length > 0) {
+            stateDisableDate.map((i) => {
+                let dateindexLast = parseInt(i.date.split('/')[2])
+                let datePlus = dateindexLast += 1
+                let newDate = i.date.split('/')[0] + '/' + i.date.split('/')[1] + '/' + datePlus
+                if (i.date === moment(date).format('YYYY/M/D')) {
+                    dispatch({ type: "ALL_DISABLE_SANS_" })
+                }
+
+
+                if (datePlus != 32) {
+                    newList.push({
+                        disabled: true,
+                        start: newDate,
+                        end: i.date,
+                    })
+                } else {
+                    newList.push({
+                        disabled: true,
+                        start: i.date,
+                        end: i.date,
+                    })
+                }
+            }
+            )
+        }
+        // let activeSans = []
+        // if (state.SansReducer !== "DISABLE") {
+        //     state.SansReducer.map((s) => {
+        //         console.log(s)
+        //         if (!s.disable) {
+        //             activeSans.push({
+        //                 color: "black",
+        //                 start: moment(date).format('YYYY/M/D'),
+        //                 end: moment(date).format('YYYY/M/D'),
+        //             })
+        //         }
+        //     })
+        //     console.log(activeSans)
+        // }
+        setDisableDate([{
+            disabled: true,
+            start: momentJalaali().add(-1000, 'days'),
+            end: momentJalaali().add(-1, 'days')
+        }, ...newList])
+    }, [state.disableDate, state.SansReducer])
 
 
 
@@ -144,9 +162,9 @@ const Step2 = () => {
                 />
                 {/* Help calendar */}
                 <div className="mt-5 pr-4" style={{ position: 'relative' }}>
-                    <div style={{ position: 'absolute', width: '24px', height: '24px', background: 'red', borderRadius: '3px' }}></div>
+                    <div style={{ position: 'absolute', width: '24px', height: '24px', background: '#BCBCBC', borderRadius: '3px' }}></div>
                     <p className="d-inline-block mr-5">
-                        تعداد سانس های خالی
+                        روز های غیر فعال
                     </p>
                 </div>
                 <div className=" pr-4" style={{ position: 'relative' }}>
@@ -170,7 +188,7 @@ const Step2 = () => {
                 </a>
                 <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
 
-                    {state.SansReducer.map((item, index) => {
+                    {state.SansReducer === "DISABLE" ? 'غیر فعال' : state.SansReducer.map((item, index) => {
                         if (item.disable) {
                             return (
                                 <div key={index} className="px-4 d-flex my-3">
