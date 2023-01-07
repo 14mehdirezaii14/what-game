@@ -10,9 +10,9 @@ const Gameinformationbox = (props) => {
     return (
         <div className="Game-information-box py-5">
             {/* title */}
-            <div className=" title text-center align-items-center px-4">
-                <h4 className="text-dark text-center ">{props.game.name}</h4>
-                <img src={SERVER_DOMAIN + props.game.img} alt="" />
+            <div className="d-flex title text-center align-items-center px-4">
+                <img src={SERVER_DOMAIN + props.game.img} width={100} height={100} alt="" />
+                <h5 className="text-dark text-center  pr-3">{props.game.name}</h5>
             </div>
             {/* genre */}
             <div className="my-3  border-bottom d-flex justify-content-between px-4">

@@ -14,7 +14,7 @@ const Step2 = () => {
         disabled: true,
         start: momentJalaali().add(-1000, 'days'),
         end: momentJalaali().add(-1, 'days')
-    },])
+    }])
 
     const state = useSelector((state) => state)
     const [ChoiceDay, setChoiceDay] = useState(new Intl.DateTimeFormat('fa-IR-u-nu-latn', { dateStyle: 'medium', timeStyle: 'medium' }).format(momentJalaali(moment().format('jYYYY/jM/jD'), 'jYYYY/jM/jD')).replace('0:00:00', ''))
@@ -78,7 +78,8 @@ const Step2 = () => {
             disabled: true,
             start: momentJalaali().add(-1000, 'days'),
             end: momentJalaali().add(-1, 'days')
-        }, ...newList])
+        }
+            , ...newList])
     }, [state.disableDate, state.SansReducer])
 
 
@@ -173,6 +174,12 @@ const Step2 = () => {
                         قابل رزرو
                     </p>
                 </div>
+                <div className=" pr-4" style={{ position: 'relative' }}>
+                    <div style={{ position: 'absolute', width: '24px', height: '24px', background: '#3058C5', borderRadius: '3px' }}></div>
+                    <p className="d-inline-block mr-5">
+                        انتخاب شما
+                    </p>
+                </div>
             </div>
             {/*  */}
 
@@ -184,7 +191,6 @@ const Step2 = () => {
             <div className="dropdown ">
                 <a href="#" className="ChooseAnHour py-2 px-3 text-right btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {timee}
-
                 </a>
                 <div className="dropdown-menu w-100 text-right" ariaLabelledby="dropdownMenuButton">
 

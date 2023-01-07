@@ -3166,7 +3166,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     .responsive-mobile-menu .navbar-toggle-icon .line {
         height: 2px;
         width: 21px;
-        background: var(--main-color-two);
+        background: white;
         margin-bottom: 4px;
         display: block;
         -webkit-transition: all 0.3s ease;
@@ -3221,7 +3221,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     }
     .navbar-area {
         padding: 13px 0;
-        background: #ffffff;
     }
     .navbar-area .nav-container .navbar-collapse .navbar-nav {
         display: block;
@@ -6166,6 +6165,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     transition: all 0.6s ease;
 }
 
+
 /* .slick-slide {
     margin-left: 10px;
 } */
@@ -8416,6 +8416,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ul {
     list-style: none;
 }
+
 
 /* .slick-slider {
     height: 500px;
