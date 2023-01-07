@@ -21,7 +21,7 @@ const UpcomingWorld = () => {
 		dots: true,
 		infinite: false,
 		speed: 500,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		dots: false,
 		responsive: [
@@ -89,7 +89,7 @@ const UpcomingWorld = () => {
 									<div data-index={index} key={slide.id} className="single-upconing-card">
 										<Link to={`/the-game/${slide.id}`}>
 											<div width={500} height={500} className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
-												<img width={500} height={500} src={SERVER_DOMAIN + slide.img} className='img-fluid w-sm-100' alt="flag" />
+												<img src={SERVER_DOMAIN + slide.img} className='img-fluid w-100' alt="flag" />
 											</div>
 											{/* content modal */}
 											<div className="content text-center w-100 bg-dark">
