@@ -28,14 +28,14 @@ const UpcomingWorld = () => {
 			{
 				breakpoint: 2348,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					infinite: true,
 					dots: true
 				},
 				breakpoint: 1024,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					infinite: true,
 					dots: true
@@ -51,7 +51,7 @@ const UpcomingWorld = () => {
 			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					slidesToScroll: 1
 				}
 			}

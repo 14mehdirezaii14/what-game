@@ -9,7 +9,7 @@ class BannerV2 extends Component {
         let publicUrl = process.env.PUBLIC_URL+'/'
         let imagealt = 'image'
 
-    return  <div className="main-banner-area jarallax" style={{backgroundImage: 'url('+publicUrl+'assets/img/banner/bannerHomeImg.png)'}}>
+    return  <div className="main-banner-area jarallax" style={{backgroundImage: 'url('+publicUrl+'assets/img/banner/Door1.png)'}}>
 			  
 			</div>
         }
