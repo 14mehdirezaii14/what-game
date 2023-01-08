@@ -29,7 +29,12 @@ class Footer_v1 extends Component {
 										<img src={publicUrl + "assets/img/MyLogo.png"} width={50} height={50} alt="footer logo" />
 										<span className='text-light'>بازی چی</span>
 									</Link>
-									<p>We believe brand interaction is key in commu- nication. Real innovations and a positive customer experience are the heart of successful communication.</p>
+									<p>
+										بازی و سرگرمی جزئی جدانشدنی از زندگی بشر بوده و هست. به عقیده ما، بازی هم مثل هوا برای زندگی واجبه.
+										" بازیچی " در سال ۱۴۰۰ تشکیل شد تا بتونه با همراهی همه شما بازی دوستان، کمکی برای صنعت بازی و سرگرمی این سرزمین باشه.
+										این راه رو از "اتاق فرار" شروع کرد و امیدواریم بتونه راههای جدیدی رو برای همه باز کنه.
+
+									</p>
 									<div className="d-flex mb-5">
 										<div className="bg-light rounded">
 											<img src={publicUrl + "assets/img/Electronic-trust-symbol.png"} alt="" />ّ

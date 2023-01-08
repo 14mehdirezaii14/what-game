@@ -4224,6 +4224,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .single-blog {
     margin-bottom: 30px;
     border-radius: 10px;
+    border: 1px solid #43382C;
 }
 
 .single-blog .thumb {
@@ -6240,7 +6241,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     bottom: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgba(13, 13, 13, 0.8);
+    background-color: #0d0d0d87;
     ;
 }
 

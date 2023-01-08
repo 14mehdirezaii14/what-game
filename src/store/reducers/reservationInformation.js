@@ -14,11 +14,16 @@ let form = {
 function reservationInformation(state = form, action) {
     switch (action.type) {
         case 'setPrice':
+            console.log(action)
             form.price = action.peyload.price
             return form
         case 'setDate':
             form.date = action.peyload.date
+            return form
+        case 'setTimee':
             form.timee = action.peyload.timee
+            return form
+        case 'setNumberOfPersons':
             form.numberOfPersons = action.peyload.numberOfPersons
             return form
         case 'UserProfile':

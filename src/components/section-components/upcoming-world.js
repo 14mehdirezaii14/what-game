@@ -24,6 +24,7 @@ const UpcomingWorld = () => {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		dots: false,
+		
 		responsive: [
 			{
 				breakpoint: 2348,
@@ -92,7 +93,7 @@ const UpcomingWorld = () => {
 												<img src={SERVER_DOMAIN + slide.img} className='img-fluid w-100' alt="flag" />
 											</div>
 											{/* content modal */}
-											<div className="content text-center w-100 bg-dark">
+											<div className="content text-center w-100 ">
 												<div className='w-100'>
 													{/* title */}
 													<h3 className="title text-center">

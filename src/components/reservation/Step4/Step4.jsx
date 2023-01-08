@@ -5,7 +5,9 @@ const Step4 = () => {
     const state = useSelector((state) => state)
     const dispatch = useDispatch()
     let publicUrl = process.env.PUBLIC_URL + '/'
-
+useEffect(() => {
+console.log(state)
+},[state])
     const payment = () => {
         reservationApi(state.reservationInformation)
     }
