@@ -15,6 +15,10 @@ const CalendarComponent = () => {
         end: momentJalaali().add(-1, 'days')
     }])
 
+    useEffect(() => {
+        dispatch({ type: 'setDate', peyload: { date: moment().format('YYYY/M/D') } })
+    },[])
+
     // CHECK DISABLE DATE
     useEffect(() => {
         let newList = []

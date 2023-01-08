@@ -51,12 +51,9 @@ const Reservation = () => {
                         <div className="d-flex justify-content-around stepUi mb-5">
                             <div className={`step1 ${state.reservation.step !== 1 ? 'stepYellow step1AfterYellow' : null} d-inline-block text-center`}>
                                 <span className="">1</span>
-
-
                                 <div className="mt-4">
                                     قوانین و مقررات
                                 </div>
-
                             </div>
                             <div className={`step2  ${state.reservation.step >= 2 ? ' step2Yellow' : null} ${state.reservation.step >= 3 ? 'stepYellow step2AfterYellow' : null} d-inline-block text-center`}>
                                 <span className="">2</span>

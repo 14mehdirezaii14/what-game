@@ -3,8 +3,8 @@ let form = {
     nameGame: '',
     price: '',
     date: '',
-    timee: '',
-    numberOfPersons: '',
+    timee: 'انتخاب سانس',
+    numberOfPersons: 'انتخاب نفرات',
     name: '',
     lastName: '',
     email: '',
@@ -16,6 +16,7 @@ function reservationInformation(state = form, action) {
         case 'setPrice':
             console.log(action)
             form.price = action.peyload.price
+            console.log(form)
             return form
         case 'setDate':
             form.date = action.peyload.date
@@ -25,6 +26,7 @@ function reservationInformation(state = form, action) {
             return form
         case 'setNumberOfPersons':
             form.numberOfPersons = action.peyload.numberOfPersons
+            console.log(form)
             return form
         case 'UserProfile':
             form.name = action.peyload.name
