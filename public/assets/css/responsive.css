@@ -1281,6 +1281,9 @@
     .single-page-small-title {
         line-height: 28px;
     }
+    #tp_main_menu {
+        background-color: white;
+    }
 }
 
 

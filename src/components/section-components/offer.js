@@ -37,15 +37,15 @@ class Offer extends Component {
 							<div className="row">
 								<div className="col-md-4">
 									<div className="p-3">
-										<img src="/assets/img/raychan-Q3Vefy3v7L0-unsplash.png" className='rounded  img-fluid' alt="" />									</div>
+										<img src="/assets/img/raychan-Q3Vefy3v7L0-unsplash.png" className='rounded  img-fluid w-100' alt="" />									</div>
 								</div>
 								<div className="col-md-4">
 									<div className="p-3">
-										<img src="/assets/img/aral-tasher-DKaSZmMCyP0-unsplash.png" className='rounded img-fluid' alt="" />									</div>
+										<img src="/assets/img/aral-tasher-DKaSZmMCyP0-unsplash.png" className='rounded img-fluid w-100' alt="" />									</div>
 								</div>
 								<div className="col-md-4">
 									<div className="p-3">
-										<img src="/assets/img/danielle-suijkerbuijk-8D__BFusfUQ-unsplash (1).png" className='rounded img-fluid' alt="" />									</div>
+										<img src="/assets/img/danielle-suijkerbuijk-8D__BFusfUQ-unsplash (1).png" className='rounded img-fluid w-100' alt="" />									</div>
 								</div>
 
 							</div>
