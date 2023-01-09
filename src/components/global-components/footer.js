@@ -103,17 +103,17 @@ class Footer_v1 extends Component {
 									</li>
 									<p>
 										<i className="fa fa-map-marker" />
-										<span>Manama Tower, Badda Link Road, Badda Dhaka, Bangladesh</span>
+										<span>خیایان شریعتی، سه راه طالقانی، ابتدای خیابان خواجه نصیر ، جنب بانک آینده، پلاک ۲۹۴، واحد۴</span>
 									</p>
-									<p className="location">
-										<i className="fa fa-envelope-o" />
-										<span>travelpoint@gmail.com</span>
-									</p>
+
 									<p className="telephone">
 										<i className="fa fa-phone base-color" />
 										<span>
-											+088 012121240
+											021-77539735
 										</span>
+										<br />
+										<i className="fa fa-phone base-color" />
+										<span>09391007826</span>
 									</p>
 								</ul>
 							</div>
@@ -135,7 +135,7 @@ class Footer_v1 extends Component {
 				</div>
 				<div className="copyright-inner" style={{ direction: 'ltr' }}>
 					<div className="copyright-text">
-						© Baazi Chi 2022 All rights reserved. Powered with <a href="https://codingeek.net/" target="_blank"><i className="fa fa-heart" /><span>by Nilva</span></a>
+						© Baazi Chi 2022 All rights reserved. Powered with <a href="https://codingeek.net/" target="_blank"><i className="fa fa-heart" /><span>by OZONE</span></a>
 					</div>
 				</div>
 			</footer>
