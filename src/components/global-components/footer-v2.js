@@ -85,7 +85,7 @@ class Footer_v2 extends Component {
 				          </div>
 				        </div>
 				        <div className="col-lg-4 col-md-3">
-				          <ul className="social-icon float-lg-right">
+				          <ul className="social-icon float-lg-right pr-0">
 				            <li>
 				              <a className="facebook" href="https://www.facebook.com/codingeek.net/" target="_blank"><i className="fa fa-facebook  " /></a>
 				            </li>

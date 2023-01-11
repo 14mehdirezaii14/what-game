@@ -15,7 +15,7 @@ const Gameinformationbox = (props) => {
                 <h5 className="text-dark text-center  pr-3">{props.game.name}</h5>
             </div>
             {/* genre */}
-            <div className="my-3  border-bottom d-flex justify-content-between px-4">
+            <div className="my-3  d-flex justify-content-between px-4" style={{borderBottom:'1px solid rgb(207 207 207)'}}>
                 <p className="text-right text-dark">
                     ژانر
                 </p>
@@ -24,7 +24,7 @@ const Gameinformationbox = (props) => {
                 </p>
             </div>
             {/* time */}
-            <div className="my-3  border-bottom d-flex justify-content-between px-4">
+            <div className="my-3  d-flex justify-content-between px-4" style={{borderBottom:'1px solid rgb(207 207 207)'}}>
                 <p className="text-right text-dark">
                     <i className="fa fa-clock-o fa-lg ml-2 "></i>
                     زمان
@@ -35,7 +35,7 @@ const Gameinformationbox = (props) => {
                 </p>
             </div>
             {/* Capacity */}
-            <div className="my-3  border-bottom d-flex justify-content-between px-4">
+            <div className="my-3  d-flex justify-content-between px-4" style={{borderBottom:'1px solid rgb(207 207 207)'}}>
                 <p className="text-right text-dark">
                     <i class="fa fa-users fa-lg ml-2"></i>
                     ظرفیت
@@ -46,7 +46,7 @@ const Gameinformationbox = (props) => {
                 </p>
             </div>
             {/* degree of difficulty */}
-            <div className="my-3  border-bottom d-flex justify-content-between px-4">
+            <div className="my-3  d-flex justify-content-between px-4" style={{borderBottom:'1px solid rgb(207 207 207)'}}>
                 <p className="text-right text-dark">
                     <i class="fa fa-lock fa-lg ml-2"></i>
                     درجه سختی
@@ -57,7 +57,7 @@ const Gameinformationbox = (props) => {
                 </p>
             </div>
             {/* age */}
-            <div className="my-3  border-bottom d-flex justify-content-between px-4">
+            <div className="my-3  d-flex justify-content-between px-4" style={{borderBottom:'1px solid rgb(207 207 207)'}}>
                 <p className="text-right text-dark">
                     <i class="fa fa-exclamation fa-lg ml-2"></i>
                     سن

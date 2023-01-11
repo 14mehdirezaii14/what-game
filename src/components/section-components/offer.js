@@ -24,10 +24,10 @@ class Offer extends Component {
 					<div className="row">
 						<div className="col-lg-3 ">
 							<div className="container px-5 py-5">
-								<h3 className='text-light'>
+								<h3 className='text-light text-right'>
 									سورپرایز در مناسبت ها
 								</h3>
-								<p className="mt-5 text-right">
+								<p className="mt-5 text-right text-light">
 									تا حالا فکر کردین برای سورپرایز و غافلگیر کردن عزیزانتون در مناسبت های مختلف مثل تولد یا سالگرد آشنایی و.... ، فضا و حال و هوای متفاوتی رو انتخاب کنید؟!
 									چه جایی متفاوت تر و جذاب تر از یک اتاق فرار خوب و عالی؟!
 								</p>

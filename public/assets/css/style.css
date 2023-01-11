@@ -737,7 +737,6 @@ ul {
 
 .btn-read-more span {
     position: relative;
-    padding-right: 28px;
 }
 
 .btn-read-more span i {
@@ -1198,12 +1197,12 @@ ul {
 .tp-pagination ul li .page-numbers {
     width: 50px;
     height: 50px;
-    border: 2px solid #CFD3DE;
+    border: 2px solid #707A8C;
     border-radius: 50%;
     line-height: 48px;
     text-align: center;
     display: inline-block;
-    color: #97A1B3;
+    color: #707A8C;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -1214,7 +1213,6 @@ ul {
 
 .tp-pagination ul li .page-numbers:hover,
 .tp-pagination ul li .page-numbers.current {
-    background: #ffffff;
     border: 2px solid var(--main-color-one);
     color: var(--main-color-one);
 }
@@ -2811,6 +2809,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    /* background-color: #121212;
+    margin-bottom: 50px; */
 }
 
 .navbar-area-fixed {
@@ -2825,7 +2825,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
         display: none;
     }
     .navbar-area .nav-container .desktop-logo {
-        margin-right: 140px;
         position: relative;
     }
     .navbar-area .nav-container .navbar-collapse .navbar-nav {
@@ -3373,7 +3372,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .about_us_widget .footer-logo img {
-    max-width: 110px;
+    max-width: 160px;
 }
 
 .nav-right-content ul li .btn {
@@ -4224,7 +4223,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .single-blog {
     margin-bottom: 30px;
     border-radius: 10px;
-    border: 1px solid #43382C;
 }
 
 .single-blog .thumb {
@@ -7474,7 +7472,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .sidebar-area .widget {
     background: #F8F8F8;
     padding: 30px 0 26px 0;
-    margin-bottom: 60px;
     border-radius: 8px;
 }
 

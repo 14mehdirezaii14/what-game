@@ -18,16 +18,16 @@ class Footer_v1 extends Component {
 		let imgattr = "Footer logo"
 
 		return (
-			<footer className="footer-area" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/bg/Footer.png)' }}>
+			<footer className="footer-area" style={{ marginTop: '150px', backgroundImage: 'url(' + publicUrl + 'assets/img/bg/Footer.png)' }}>
 				<div className="container z1" style={{ zIndex: 1 }}>
 					<div className="row text-right">
 						<div className="col-lg-4 col-md-6">
-							<div className="footer-widget widget">
+							<div className="footer-widget widget ">
 								<div className="about_us_widget">
 									<Link to="/" className="footer-logo d-flex align-items-center">
 
-										<img src={publicUrl + "assets/img/MyLogo.png"} width={50} height={50} alt="footer logo" />
-										<span className='text-light'>بازی چی</span>
+										<img src={publicUrl + "assets/img/unnamed.png"} width={5000} className="img-fluid" alt="footer logo" />
+										{/* <span className='text-light'>بازی چی</span> */}
 									</Link>
 									<p>
 										بازی و سرگرمی جزئی جدانشدنی از زندگی بشر بوده و هست. به عقیده ما، بازی هم مثل هوا برای زندگی واجبه.
@@ -37,13 +37,13 @@ class Footer_v1 extends Component {
 									</p>
 									<div className="d-flex mb-5">
 										<div className="bg-light rounded">
-											<img src={publicUrl + "assets/img/Electronic-trust-symbol.png"} alt="" />ّ
+											<img src={publicUrl + "assets/img/Electronic-trust-symbol.png"} alt="" />
 										</div>
 										<div className="bg-light rounded mr-5">
 											<img src={publicUrl + "assets/img/National-mark-of-registration.png"} alt="" />ّ
 										</div>
 									</div>
-									<ul className="social-icon">
+									<ul className="social-icon pr-0">
 										<li>
 											<a href="/" target="_blank"><i className="fa fa-instagram  " /></a>
 										</li>
@@ -56,7 +56,7 @@ class Footer_v1 extends Component {
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6">
-							<div className="footer-widget widget ">
+							<div className="footer-widget widget mr-5 pr-3">
 								<div className="widget-contact">
 									<h4 className="widget-title">دسترسی سریع</h4>
 

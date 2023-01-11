@@ -8,7 +8,7 @@ class Navbar extends Component {
 		let imgattr = 'logo'
 		let anchor = '#'
 		return (
-			<nav className="navbar navbar-area navbar-expand-lg nav-style-01 viaje-go-top">
+			<nav className="navbar navbar-area navbar-expand-lg nav-style-01 viaje-go-top" >
 				<div className="container nav-container">
 					<div className="responsive-mobile-menu">
 						<div className="mobile-logo">

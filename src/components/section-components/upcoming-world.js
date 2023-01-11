@@ -24,7 +24,7 @@ const UpcomingWorld = () => {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		dots: false,
-		
+
 		responsive: [
 			{
 				breakpoint: 2348,
@@ -78,9 +78,10 @@ const UpcomingWorld = () => {
 					{/* single card */}
 
 
-					<div className="d-flex ml-3 mb-3">
-						<span className="slick-prev slick-arrow mr-4" onClick={previous} style={{ display: 'block' }}><i className="la la-long-arrow-left"></i></span>
-						<span className="slick-next slick-arrow" onClick={next} style={{ display: 'block' }}><i className="la la-long-arrow-right"></i></span>
+					<div className="container d-flex mb-3">
+						<span className="slick-next slick-arrow" onClick={next} style={{ display: 'block' }}><img src="/assets/img/icons/arrowLeft.svg" alt="" /></span>
+						<span className="slick-prev slick-arrow ml-4" onClick={previous} style={{ display: 'block' }}> <img src="/assets/img/icons/arrowRight.svg" alt="" /> </span>
+
 					</div>
 					{!activeRooms ? null :
 						<Slider infinite={false} ref={slider} arrows={false} dotsClass={'d-none'} dots={false}  {...settings}>
@@ -89,8 +90,8 @@ const UpcomingWorld = () => {
 
 									<div data-index={index} key={slide.id} className="single-upconing-card">
 										<Link to={`/the-game/${slide.id}`}>
-											<div width={500} height={500} className="shadow" style={{ backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
-												<img src={SERVER_DOMAIN + slide.img} className='img-fluid w-100' alt="flag" />
+											<div width={500} height={500} className="" style={{ borderRadius: '10px', backgroundImage: 'url(' + publicUrl + 'assets/img/tour/anton-stasiuk-RqQ081i8HFA-unsplash 1.png)' }}>
+												<img src={SERVER_DOMAIN + slide.img} className='img-fluid w-100 ' style={{ borderRadius: '10px' }} alt="flag" />
 											</div>
 											{/* content modal */}
 											<div className="content text-center w-100 ">
